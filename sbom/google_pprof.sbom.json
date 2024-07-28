@@ -1,0 +1,298 @@
+{
+  "sbom": {
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+      "created": "2024-07-26T21:43:46Z",
+      "creators": [
+        "Tool: GitHub.com-Dependency-Graph"
+      ]
+    },
+    "name": "com.github.google/pprof",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+      "SPDXRef-com.github.google-pprof"
+    ],
+    "documentNamespace": "https://github.com/google/pprof/dependency_graph/sbom-ce6105a35a725a46",
+    "packages": [
+      {
+        "SPDXID": "SPDXRef-com.github.google-pprof",
+        "name": "com.github.google/pprof",
+        "versionInfo": "",
+        "downloadLocation": "git+https://github.com/google/pprof",
+        "filesAnalyzed": false,
+        "licenseDeclared": "Apache-2.0"
+      },
+      {
+        "SPDXID": "SPDXRef-go-golang.org-x-sys-0.6.0",
+        "name": "go:golang.org/x/sys",
+        "versionInfo": "0.6.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:golang/golang.org%2Fx%2Fsys@0.6.0"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-go-github.com-chzyer-readline-1.5.1",
+        "name": "go:github.com/chzyer/readline",
+        "versionInfo": "1.5.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:golang/github.com%2Fchzyer%2Freadline@1.5.1"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-go-github.com-ianlancetaylor-demangle-0.0.0-20240312041847-bd984b5ce465",
+        "name": "go:github.com/ianlancetaylor/demangle",
+        "versionInfo": "0.0.0-20240312041847-bd984b5ce465",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:golang/github.com%2Fianlancetaylor%2Fdemangle@0.0.0-20240312041847-bd984b5ce465"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-go-github.com-josharian-intern-1.0.0",
+        "name": "go:github.com/josharian/intern",
+        "versionInfo": "1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:golang/github.com%2Fjosharian%2Fintern@1.0.0"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-go-github.com-mailru-easyjson-0.7.7",
+        "name": "go:github.com/mailru/easyjson",
+        "versionInfo": "0.7.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:golang/github.com%2Fmailru%2Feasyjson@0.7.7"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-go-github.com-chromedp-sysutil-1.0.0",
+        "name": "go:github.com/chromedp/sysutil",
+        "versionInfo": "1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:golang/github.com%2Fchromedp%2Fsysutil@1.0.0"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-go-github.com-gobwas-httphead-0.1.0",
+        "name": "go:github.com/gobwas/httphead",
+        "versionInfo": "0.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:golang/github.com%2Fgobwas%2Fhttphead@0.1.0"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-go-github.com-gobwas-pool-0.2.1",
+        "name": "go:github.com/gobwas/pool",
+        "versionInfo": "0.2.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:golang/github.com%2Fgobwas%2Fpool@0.2.1"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-go-github.com-gobwas-ws-1.2.1",
+        "name": "go:github.com/gobwas/ws",
+        "versionInfo": "1.2.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:golang/github.com%2Fgobwas%2Fws@1.2.1"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-go-github.com-chromedp-chromedp-0.9.2",
+        "name": "go:github.com/chromedp/chromedp",
+        "versionInfo": "0.9.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:golang/github.com%2Fchromedp%2Fchromedp@0.9.2"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-go-github.com-chromedp-cdproto-0.0.0-20230802225258-3cf4e6d46a89",
+        "name": "go:github.com/chromedp/cdproto",
+        "versionInfo": "0.0.0-20230802225258-3cf4e6d46a89",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:golang/github.com%2Fchromedp%2Fcdproto@0.0.0-20230802225258-3cf4e6d46a89"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-go-github.com-google-pprof-0.0.0",
+        "name": "go:github.com/google/pprof",
+        "versionInfo": "0.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fpprof@0.0.0"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-actions-re-actors-alls-green-05ac9388f0aebcb5727afa17fcccfecd6f8ec5fe",
+        "name": "actions:re-actors/alls-green",
+        "versionInfo": "05ac9388f0aebcb5727afa17fcccfecd6f8ec5fe",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:generic/github/re-actors%2Falls-green@05ac9388f0aebcb5727afa17fcccfecd6f8ec5fe"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-actions-maxim-lobanov-setup-xcode-60606e260d2fc5762a71e64e74b2174e8ea3c8bd",
+        "name": "actions:maxim-lobanov/setup-xcode",
+        "versionInfo": "60606e260d2fc5762a71e64e74b2174e8ea3c8bd",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:generic/github/maxim-lobanov%2Fsetup-xcode@60606e260d2fc5762a71e64e74b2174e8ea3c8bd"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-actions-crazy-max-ghaction-chocolatey-0e015857dd851f84fcb7fb53380eb5c4c8202333",
+        "name": "actions:crazy-max/ghaction-chocolatey",
+        "versionInfo": "0e015857dd851f84fcb7fb53380eb5c4c8202333",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:generic/github/crazy-max%2Fghaction-chocolatey@0e015857dd851f84fcb7fb53380eb5c4c8202333"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-actions-actions-checkout-692973e3d937129bcbf40652eb9f2f61becf3332",
+        "name": "actions:actions/checkout",
+        "versionInfo": "692973e3d937129bcbf40652eb9f2f61becf3332",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:generic/github/actions%2Fcheckout@692973e3d937129bcbf40652eb9f2f61becf3332"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-actions-codecov-codecov-action-e28ff129e5465c2c0dcc6f003fc735cb6ae0c673",
+        "name": "actions:codecov/codecov-action",
+        "versionInfo": "e28ff129e5465c2c0dcc6f003fc735cb6ae0c673",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:generic/github/codecov%2Fcodecov-action@e28ff129e5465c2c0dcc6f003fc735cb6ae0c673"
+          }
+        ]
+      },
+      {
+        "SPDXID": "SPDXRef-actions-actions-setup-go-0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32",
+        "name": "actions:actions/setup-go",
+        "versionInfo": "0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseDeclared": "",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:generic/github/actions%2Fsetup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32"
+          }
+        ]
+      }
+    ]
+  }
+}

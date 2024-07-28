@@ -1,0 +1,156 @@
+---
+run:
+  concurrency: 6
+  timeout: 5m
+issues:
+  # Maximum issues count per one linter.
+  # Set to 0 to disable.
+  # Default: 50
+  max-issues-per-linter: 0
+  # Maximum count of issues with the same text.
+  # Set to 0 to disable.
+  # Default: 3
+  max-same-issues: 0
+  new-from-rev: ""
+  exclude-rules:
+    - path: '(.+)_test\.go'
+      linters:
+        - funlen
+        - goconst
+        - gocyclo
+        - gocognit
+        - lll
+        - wrapcheck
+        - govet
+linters:
+  enable:
+    - asciicheck
+    - dogsled
+    - errcheck
+    - errname
+    - errorlint
+    - exhaustive
+    - exportloopref
+    - gci
+    - gochecknoinits
+    - gocognit
+    - goconst
+    - gocritic
+    - gocyclo
+    - godot
+    - godox
+    - gofmt
+    - goheader
+    - goimports
+    - gomodguard
+    - goprintffuncname
+    - gosec
+    - gosimple
+    - govet
+    - ineffassign
+    - lll
+    - makezero
+    - mirror
+    - misspell
+    - nakedret
+    - nestif
+    - nolintlint
+    - predeclared
+    - staticcheck
+    - stylecheck
+    - tenv
+    - thelper
+    - typecheck
+    - unconvert
+    - unused
+    - usestdlibvars
+    - whitespace
+    - wrapcheck
+  disable:
+    - exhaustruct 
+    - testpackage 
+    - paralleltest
+    - tparallel
+  presets:
+    - bugs
+    - test
+linters-settings:
+  errcheck:
+    check-type-assertions: true
+    check-blank: true
+  exhaustive:
+    # https://golangci-lint.run/usage/linters/#exhaustive
+    default-signifies-exhaustive: true
+  godox:
+    keywords:
+      - BUG
+      - FIXME
+      - HACK
+  gci:
+    sections:
+      - standard
+      - default
+      - prefix(github.com/bit-bom/bom-factory)
+  gocritic:
+    enabled-checks:
+      # Diagnostic
+      - appendAssign
+      - badCond
+      - caseOrder
+      - codegenComment
+      - commentedOutCode
+      - deprecatedComment
+      - dupBranchBody
+      - dupCase
+      - dupSubExpr
+      - exitAfterDefer
+      - flagName
+      - nilValReturn
+      - weakCond
+      - octalLiteral
+
+      # Performance
+      - appendCombine
+      - hugeParam
+      - rangeExprCopy
+      - rangeValCopy
+
+      # Style
+      - boolExprSimplify
+      - captLocal
+      - commentFormatting
+      - commentedOutImport
+      - defaultCaseOrder
+      - docStub
+      - elseif
+      - emptyFallthrough
+      - hexLiteral
+      - ifElseChain
+      - methodExprCall
+      - singleCaseSwitch
+      - typeAssertChain
+      - typeSwitchVar
+      - underef
+      - unlabelStmt
+      - unlambda
+
+      # Opinionated
+      - builtinShadow
+      - importShadow
+      - initClause
+      - nestingReduce
+      - paramTypeCombine
+      - ptrToRefParam
+      - typeUnparen
+      - unnecessaryBlock
+  nolintlint:
+    # `//nolint` should mention specific linter such as `//nolint:my-linter`
+    # Overly broad directives can hide unrelated issues
+    require-specific: true
+  godot:
+    # Check top-level declaration comments by default
+    scope: declarations
+    # Ensure periods at the end of sentences
+    period: true
+    # Optionally, ensure that the first letter of each sentence is capitalized
+    capital: false
