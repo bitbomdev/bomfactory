@@ -1,1 +1,26 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:51:05Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/gofountain","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-gofountain"],"documentNamespace":"https://github.com/google/gofountain/dependency_graph/sbom-040866289c423fe7","packages":[{"SPDXID":"SPDXRef-com.github.google-gofountain","name":"com.github.google/gofountain","versionInfo":"","downloadLocation":"git+https://github.com/google/gofountain","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:29:19Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/gofountain",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-gofountain"
+  ],
+  "documentNamespace": "https://github.com/google/gofountain/dependency_graph/sbom-1fb508106fca12cf",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-gofountain",
+      "name": "com.github.google/gofountain",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/gofountain",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    }
+  ]
+}

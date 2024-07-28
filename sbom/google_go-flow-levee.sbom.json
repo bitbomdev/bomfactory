@@ -1,1 +1,126 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:49:54Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/go-flow-levee","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-go-flow-levee"],"documentNamespace":"https://github.com/google/go-flow-levee/dependency_graph/sbom-08355299ed7e7e56","packages":[{"SPDXID":"SPDXRef-com.github.google-go-flow-levee","name":"com.github.google/go-flow-levee","versionInfo":"","downloadLocation":"git+https://github.com/google/go-flow-levee","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"},{"SPDXID":"SPDXRef-go-sigs.k8s.io-yaml-1.2.0","name":"go:sigs.k8s.io/yaml","versionInfo":"1.2.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-tools-0.1.12","name":"go:golang.org/x/tools","versionInfo":"0.1.12","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-google-go-cmp-0.5.2","name":"go:github.com/google/go-cmp","versionInfo":"0.5.2","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-actions-checkout-1","name":"actions:actions/checkout","versionInfo":"1","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-actions-setup-go-2","name":"actions:actions/setup-go","versionInfo":"2","downloadLocation":"NOASSERTION","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:28:05Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/go-flow-levee",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-go-flow-levee"
+  ],
+  "documentNamespace": "https://github.com/google/go-flow-levee/dependency_graph/sbom-30b8c688e0c78c0b",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-go-flow-levee",
+      "name": "com.github.google/go-flow-levee",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/go-flow-levee",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-sigs.k8s.io-yaml-1.2.0",
+      "name": "go:sigs.k8s.io/yaml",
+      "versionInfo": "1.2.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/sigs.k8s.io%2Fyaml@1.2.0"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/sigs.k8s.io%2Fyaml@1.2.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-tools-0.1.12",
+      "name": "go:golang.org/x/tools",
+      "versionInfo": "0.1.12",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Ftools@0.1.12"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Ftools@0.1.12"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-google-go-cmp-0.5.2",
+      "name": "go:github.com/google/go-cmp",
+      "versionInfo": "0.5.2",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fgo-cmp@0.5.2"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fgo-cmp@0.5.2"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-checkout-1",
+      "name": "actions:actions/checkout",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@1"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@1"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-setup-go-2",
+      "name": "actions:actions/setup-go",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fsetup-go@2"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fsetup-go@2"
+        }
+      ],
+      "filesAnalyzed": false
+    }
+  ]
+}

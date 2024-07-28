@@ -1,1 +1,26 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:45:00Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/jsonapi","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-jsonapi"],"documentNamespace":"https://github.com/google/jsonapi/dependency_graph/sbom-5a7054ae66935d91","packages":[{"SPDXID":"SPDXRef-com.github.google-jsonapi","name":"com.github.google/jsonapi","versionInfo":"","downloadLocation":"git+https://github.com/google/jsonapi","filesAnalyzed":false,"licenseDeclared":"MIT"}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:22:33Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/jsonapi",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-jsonapi"
+  ],
+  "documentNamespace": "https://github.com/google/jsonapi/dependency_graph/sbom-333ab52f8395a290",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-jsonapi",
+      "name": "com.github.google/jsonapi",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/jsonapi",
+      "licenseDeclared": "MIT",
+      "filesAnalyzed": false
+    }
+  ]
+}

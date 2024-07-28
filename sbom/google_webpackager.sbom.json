@@ -1,1 +1,306 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:49:32Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/webpackager","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-webpackager"],"documentNamespace":"https://github.com/google/webpackager/dependency_graph/sbom-e3855c56edbbd9c4","packages":[{"SPDXID":"SPDXRef-com.github.google-webpackager","name":"com.github.google/webpackager","versionInfo":"","downloadLocation":"git+https://github.com/google/webpackager","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"},{"SPDXID":"SPDXRef-go-gopkg.in-square-go-jose.v2-2.5.1","name":"go:gopkg.in/square/go-jose.v2","versionInfo":"2.5.1","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-jpillora-backoff-1.0.0","name":"go:github.com/jpillora/backoff","versionInfo":"1.0.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-crypto-0.0.0-20200622213623-75b288015ac9","name":"go:golang.org/x/crypto","versionInfo":"0.0.0-20200622213623-75b288015ac9","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-hashicorp-golang-lru-0.5.1","name":"go:github.com/hashicorp/golang-lru","versionInfo":"0.5.1","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-hashicorp-go-multierror-1.1.0","name":"go:github.com/hashicorp/go-multierror","versionInfo":"1.1.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-pquerna-cachecontrol-0.0.0-20180517163645-1555304b9b35","name":"go:github.com/pquerna/cachecontrol","versionInfo":"0.0.0-20180517163645-1555304b9b35","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-google-renameio-0.1.0","name":"go:github.com/google/renameio","versionInfo":"0.1.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-xerrors-0.0.0-20191204190536-9bdfabe68543","name":"go:golang.org/x/xerrors","versionInfo":"0.0.0-20191204190536-9bdfabe68543","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-pelletier-go-toml-1.8.0","name":"go:github.com/pelletier/go-toml","versionInfo":"1.8.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-gofrs-flock-0.7.1","name":"go:github.com/gofrs/flock","versionInfo":"0.7.1","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-google-go-cmp-0.5.0","name":"go:github.com/google/go-cmp","versionInfo":"0.5.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-net-0.0.0-20200625001655-4c5254603344","name":"go:golang.org/x/net","versionInfo":"0.0.0-20200625001655-4c5254603344","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-go-acme-lego-v3-3.7.0","name":"go:github.com/go-acme/lego/v3","versionInfo":"3.7.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-WICG-webpackage-0.0.0-20200508035339-83a83ee876eb","name":"go:github.com/WICG/webpackage","versionInfo":"0.0.0-20200508035339-83a83ee876eb","downloadLocation":"NOASSERTION","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:27:38Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/webpackager",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-webpackager"
+  ],
+  "documentNamespace": "https://github.com/google/webpackager/dependency_graph/sbom-22f03702b6815b5f",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-webpackager",
+      "name": "com.github.google/webpackager",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/webpackager",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-gopkg.in-square-go-jose.v2-2.5.1",
+      "name": "go:gopkg.in/square/go-jose.v2",
+      "versionInfo": "2.5.1",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/gopkg.in%2Fsquare%2Fgo-jose.v2@2.5.1"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/gopkg.in%2Fsquare%2Fgo-jose.v2@2.5.1"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-jpillora-backoff-1.0.0",
+      "name": "go:github.com/jpillora/backoff",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fjpillora%2Fbackoff@1.0.0"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fjpillora%2Fbackoff@1.0.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-crypto-0.0.0-20200622213623-75b288015ac9",
+      "name": "go:golang.org/x/crypto",
+      "versionInfo": "0.0.0-20200622213623-75b288015ac9",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fcrypto@0.0.0-20200622213623-75b288015ac9"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fcrypto@0.0.0-20200622213623-75b288015ac9"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-hashicorp-golang-lru-0.5.1",
+      "name": "go:github.com/hashicorp/golang-lru",
+      "versionInfo": "0.5.1",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fhashicorp%2Fgolang-lru@0.5.1"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fhashicorp%2Fgolang-lru@0.5.1"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-hashicorp-go-multierror-1.1.0",
+      "name": "go:github.com/hashicorp/go-multierror",
+      "versionInfo": "1.1.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fhashicorp%2Fgo-multierror@1.1.0"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fhashicorp%2Fgo-multierror@1.1.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-pquerna-cachecontrol-0.0.0-20180517163645-1555304b9b35",
+      "name": "go:github.com/pquerna/cachecontrol",
+      "versionInfo": "0.0.0-20180517163645-1555304b9b35",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fpquerna%2Fcachecontrol@0.0.0-20180517163645-1555304b9b35"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fpquerna%2Fcachecontrol@0.0.0-20180517163645-1555304b9b35"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-google-renameio-0.1.0",
+      "name": "go:github.com/google/renameio",
+      "versionInfo": "0.1.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Frenameio@0.1.0"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Frenameio@0.1.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-xerrors-0.0.0-20191204190536-9bdfabe68543",
+      "name": "go:golang.org/x/xerrors",
+      "versionInfo": "0.0.0-20191204190536-9bdfabe68543",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fxerrors@0.0.0-20191204190536-9bdfabe68543"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fxerrors@0.0.0-20191204190536-9bdfabe68543"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-pelletier-go-toml-1.8.0",
+      "name": "go:github.com/pelletier/go-toml",
+      "versionInfo": "1.8.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fpelletier%2Fgo-toml@1.8.0"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fpelletier%2Fgo-toml@1.8.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-gofrs-flock-0.7.1",
+      "name": "go:github.com/gofrs/flock",
+      "versionInfo": "0.7.1",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgofrs%2Fflock@0.7.1"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgofrs%2Fflock@0.7.1"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-google-go-cmp-0.5.0",
+      "name": "go:github.com/google/go-cmp",
+      "versionInfo": "0.5.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fgo-cmp@0.5.0"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fgo-cmp@0.5.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-net-0.0.0-20200625001655-4c5254603344",
+      "name": "go:golang.org/x/net",
+      "versionInfo": "0.0.0-20200625001655-4c5254603344",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fnet@0.0.0-20200625001655-4c5254603344"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fnet@0.0.0-20200625001655-4c5254603344"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-go-acme-lego-v3-3.7.0",
+      "name": "go:github.com/go-acme/lego/v3",
+      "versionInfo": "3.7.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgo-acme%2Flego%2Fv3@3.7.0"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgo-acme%2Flego%2Fv3@3.7.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-WICG-webpackage-0.0.0-20200508035339-83a83ee876eb",
+      "name": "go:github.com/WICG/webpackage",
+      "versionInfo": "0.0.0-20200508035339-83a83ee876eb",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2FWICG%2Fwebpackage@0.0.0-20200508035339-83a83ee876eb"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2FWICG%2Fwebpackage@0.0.0-20200508035339-83a83ee876eb"
+        }
+      ],
+      "filesAnalyzed": false
+    }
+  ]
+}

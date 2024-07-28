@@ -1,1 +1,206 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:46:07Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/buzzer","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-buzzer"],"documentNamespace":"https://github.com/google/buzzer/dependency_graph/sbom-6b733642dd27c5a8","packages":[{"SPDXID":"SPDXRef-com.github.google-buzzer","name":"com.github.google/buzzer","versionInfo":"","downloadLocation":"git+https://github.com/google/buzzer","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"},{"SPDXID":"SPDXRef-go-golang.org-x-text-0.3.3","name":"go:golang.org/x/text","versionInfo":"0.3.3","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-google-safehtml-0.0.2","name":"go:github.com/google/safehtml","versionInfo":"0.0.2","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-go-echarts-go-echarts-v2-2.3.3","name":"go:github.com/go-echarts/go-echarts/v2","versionInfo":"2.3.3","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-golang-protobuf-1.5.4","name":"go:github.com/golang/protobuf","versionInfo":"1.5.4","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-actions-checkout-3.*.*","name":"actions:actions/checkout","versionInfo":"3.*.*","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-egor-tensin-setup-clang-1.*.*","name":"actions:egor-tensin/setup-clang","versionInfo":"1.*.*","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-jidicula-clang-format-action-4.11.0","name":"actions:jidicula/clang-format-action","versionInfo":"4.11.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-Jerome1337-gofmt-action-1.0.5","name":"actions:Jerome1337/gofmt-action","versionInfo":"1.0.5","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-jbajic-buildifier-1.*.*","name":"actions:jbajic/buildifier","versionInfo":"1.*.*","downloadLocation":"NOASSERTION","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:23:47Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/buzzer",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-buzzer"
+  ],
+  "documentNamespace": "https://github.com/google/buzzer/dependency_graph/sbom-d8383ff9acf72598",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-buzzer",
+      "name": "com.github.google/buzzer",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/buzzer",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-text-0.3.3",
+      "name": "go:golang.org/x/text",
+      "versionInfo": "0.3.3",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Ftext@0.3.3"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Ftext@0.3.3"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-google-safehtml-0.0.2",
+      "name": "go:github.com/google/safehtml",
+      "versionInfo": "0.0.2",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fsafehtml@0.0.2"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fsafehtml@0.0.2"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-go-echarts-go-echarts-v2-2.3.3",
+      "name": "go:github.com/go-echarts/go-echarts/v2",
+      "versionInfo": "2.3.3",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgo-echarts%2Fgo-echarts%2Fv2@2.3.3"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgo-echarts%2Fgo-echarts%2Fv2@2.3.3"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-golang-protobuf-1.5.4",
+      "name": "go:github.com/golang/protobuf",
+      "versionInfo": "1.5.4",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgolang%2Fprotobuf@1.5.4"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgolang%2Fprotobuf@1.5.4"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-checkout-3.*.*",
+      "name": "actions:actions/checkout",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@3.%2A.%2A"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@3.%2A.%2A"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-egor-tensin-setup-clang-1.*.*",
+      "name": "actions:egor-tensin/setup-clang",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/egor-tensin%2Fsetup-clang@1.%2A.%2A"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/egor-tensin%2Fsetup-clang@1.%2A.%2A"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-jidicula-clang-format-action-4.11.0",
+      "name": "actions:jidicula/clang-format-action",
+      "versionInfo": "4.11.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/jidicula%2Fclang-format-action@4.11.0"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/jidicula%2Fclang-format-action@4.11.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-Jerome1337-gofmt-action-1.0.5",
+      "name": "actions:Jerome1337/gofmt-action",
+      "versionInfo": "1.0.5",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/Jerome1337%2Fgofmt-action@1.0.5"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/Jerome1337%2Fgofmt-action@1.0.5"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-jbajic-buildifier-1.*.*",
+      "name": "actions:jbajic/buildifier",
+      "versionInfo": "1.*.*",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/jbajic%2Fbuildifier@1.%2A.%2A"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/jbajic%2Fbuildifier@1.%2A.%2A"
+        }
+      ],
+      "filesAnalyzed": false
+    }
+  ]
+}

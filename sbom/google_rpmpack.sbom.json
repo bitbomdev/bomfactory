@@ -1,1 +1,126 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:46:04Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/rpmpack","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-rpmpack"],"documentNamespace":"https://github.com/google/rpmpack/dependency_graph/sbom-6c59ca4ef9540906","packages":[{"SPDXID":"SPDXRef-com.github.google-rpmpack","name":"com.github.google/rpmpack","versionInfo":"","downloadLocation":"git+https://github.com/google/rpmpack","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"},{"SPDXID":"SPDXRef-go-github.com-klauspost-pgzip-1.2.6","name":"go:github.com/klauspost/pgzip","versionInfo":"1.2.6","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-ulikunitz-xz-0.5.11","name":"go:github.com/ulikunitz/xz","versionInfo":"0.5.11","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-cavaliergopher-cpio-1.0.1","name":"go:github.com/cavaliergopher/cpio","versionInfo":"1.0.1","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-klauspost-compress-1.16.6","name":"go:github.com/klauspost/compress","versionInfo":"1.16.6","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-google-go-cmp-0.3.1","name":"go:github.com/google/go-cmp","versionInfo":"0.3.1","downloadLocation":"NOASSERTION","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:23:43Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/rpmpack",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-rpmpack"
+  ],
+  "documentNamespace": "https://github.com/google/rpmpack/dependency_graph/sbom-2c0ad4f163eeb264",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-rpmpack",
+      "name": "com.github.google/rpmpack",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/rpmpack",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-klauspost-pgzip-1.2.6",
+      "name": "go:github.com/klauspost/pgzip",
+      "versionInfo": "1.2.6",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fklauspost%2Fpgzip@1.2.6"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fklauspost%2Fpgzip@1.2.6"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-ulikunitz-xz-0.5.11",
+      "name": "go:github.com/ulikunitz/xz",
+      "versionInfo": "0.5.11",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fulikunitz%2Fxz@0.5.11"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fulikunitz%2Fxz@0.5.11"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-cavaliergopher-cpio-1.0.1",
+      "name": "go:github.com/cavaliergopher/cpio",
+      "versionInfo": "1.0.1",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fcavaliergopher%2Fcpio@1.0.1"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fcavaliergopher%2Fcpio@1.0.1"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-klauspost-compress-1.16.6",
+      "name": "go:github.com/klauspost/compress",
+      "versionInfo": "1.16.6",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fklauspost%2Fcompress@1.16.6"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fklauspost%2Fcompress@1.16.6"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-google-go-cmp-0.3.1",
+      "name": "go:github.com/google/go-cmp",
+      "versionInfo": "0.3.1",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fgo-cmp@0.3.1"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fgo-cmp@0.3.1"
+        }
+      ],
+      "filesAnalyzed": false
+    }
+  ]
+}

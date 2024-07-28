@@ -1,1 +1,26 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:47:34Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/netstack","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-netstack"],"documentNamespace":"https://github.com/google/netstack/dependency_graph/sbom-56c58081c9c24b76","packages":[{"SPDXID":"SPDXRef-com.github.google-netstack","name":"com.github.google/netstack","versionInfo":"","downloadLocation":"git+https://github.com/google/netstack","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:25:26Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/netstack",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-netstack"
+  ],
+  "documentNamespace": "https://github.com/google/netstack/dependency_graph/sbom-62006df648acaea1",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-netstack",
+      "name": "com.github.google/netstack",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/netstack",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    }
+  ]
+}

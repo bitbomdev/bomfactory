@@ -1,1 +1,26 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:50:56Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/simhospital","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-simhospital"],"documentNamespace":"https://github.com/google/simhospital/dependency_graph/sbom-4fbaf9ec2c8a35ab","packages":[{"SPDXID":"SPDXRef-com.github.google-simhospital","name":"com.github.google/simhospital","versionInfo":"","downloadLocation":"git+https://github.com/google/simhospital","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:29:10Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/simhospital",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-simhospital"
+  ],
+  "documentNamespace": "https://github.com/google/simhospital/dependency_graph/sbom-15788538ef1e1b24",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-simhospital",
+      "name": "com.github.google/simhospital",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/simhospital",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    }
+  ]
+}

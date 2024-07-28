@@ -1,1 +1,126 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:48:33Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/git-appraise","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-git-appraise"],"documentNamespace":"https://github.com/google/git-appraise/dependency_graph/sbom-53c6cc675ea208d6","packages":[{"SPDXID":"SPDXRef-com.github.google-git-appraise","name":"com.github.google/git-appraise","versionInfo":"","downloadLocation":"git+https://github.com/google/git-appraise","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"},{"SPDXID":"SPDXRef-go-golang.org-x-sys-0.0.0-20220406163625-3f8b81556e12","name":"go:golang.org/x/sys","versionInfo":"0.0.0-20220406163625-3f8b81556e12","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-actions-checkout-3","name":"actions:actions/checkout","versionInfo":"3","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-actions-setup-go-3","name":"actions:actions/setup-go","versionInfo":"3","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-actions-checkout-2","name":"actions:actions/checkout","versionInfo":"2","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-actions-setup-go-1","name":"actions:actions/setup-go","versionInfo":"1","downloadLocation":"NOASSERTION","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:26:33Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/git-appraise",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-git-appraise"
+  ],
+  "documentNamespace": "https://github.com/google/git-appraise/dependency_graph/sbom-9de745e61c462c08",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-git-appraise",
+      "name": "com.github.google/git-appraise",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/git-appraise",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-sys-0.0.0-20220406163625-3f8b81556e12",
+      "name": "go:golang.org/x/sys",
+      "versionInfo": "0.0.0-20220406163625-3f8b81556e12",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fsys@0.0.0-20220406163625-3f8b81556e12"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fsys@0.0.0-20220406163625-3f8b81556e12"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-checkout-3",
+      "name": "actions:actions/checkout",
+      "versionInfo": "3",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@3"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@3"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-setup-go-3",
+      "name": "actions:actions/setup-go",
+      "versionInfo": "3",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fsetup-go@3"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fsetup-go@3"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-checkout-2",
+      "name": "actions:actions/checkout",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@2"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@2"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-setup-go-1",
+      "name": "actions:actions/setup-go",
+      "versionInfo": "1",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fsetup-go@1"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fsetup-go@1"
+        }
+      ],
+      "filesAnalyzed": false
+    }
+  ]
+}

@@ -1,1 +1,186 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:46:40Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/goexpect","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-goexpect"],"documentNamespace":"https://github.com/google/goexpect/dependency_graph/sbom-8de40446671cb41d","packages":[{"SPDXID":"SPDXRef-com.github.google-goexpect","name":"com.github.google/goexpect","versionInfo":"","downloadLocation":"git+https://github.com/google/goexpect","filesAnalyzed":false,"licenseDeclared":"BSD-3-Clause"},{"SPDXID":"SPDXRef-go-github.com-golang-glog-0.0.0-20160126235308-23def4e6c14b","name":"go:github.com/golang/glog","versionInfo":"0.0.0-20160126235308-23def4e6c14b","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-ziutek-telnet-0.0.0-20180329124119-c3b780dc415b","name":"go:github.com/ziutek/telnet","versionInfo":"0.0.0-20180329124119-c3b780dc415b","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-google.golang.org-grpc-1.31.0","name":"go:google.golang.org/grpc","versionInfo":"1.31.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-lint-0.0.0-20190313153728-d0100b6bd8b3","name":"go:golang.org/x/lint","versionInfo":"0.0.0-20190313153728-d0100b6bd8b3","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-crypto-0.0.0-20200728195943-123391ffb6de","name":"go:golang.org/x/crypto","versionInfo":"0.0.0-20200728195943-123391ffb6de","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-google-goterm-0.0.0-20190703233501-fc88cf888a3f","name":"go:github.com/google/goterm","versionInfo":"0.0.0-20190703233501-fc88cf888a3f","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-tools-0.0.0-20190524140312-2c0ae7006135","name":"go:golang.org/x/tools","versionInfo":"0.0.0-20190524140312-2c0ae7006135","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-honnef.co-go-tools-0.0.0-20190523083050-ea95bdfd59fc","name":"go:honnef.co/go/tools","versionInfo":"0.0.0-20190523083050-ea95bdfd59fc","downloadLocation":"NOASSERTION","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:24:23Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/goexpect",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-goexpect"
+  ],
+  "documentNamespace": "https://github.com/google/goexpect/dependency_graph/sbom-70d322774d6bdb37",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-goexpect",
+      "name": "com.github.google/goexpect",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/goexpect",
+      "licenseDeclared": "BSD-3-Clause",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-golang-glog-0.0.0-20160126235308-23def4e6c14b",
+      "name": "go:github.com/golang/glog",
+      "versionInfo": "0.0.0-20160126235308-23def4e6c14b",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgolang%2Fglog@0.0.0-20160126235308-23def4e6c14b"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgolang%2Fglog@0.0.0-20160126235308-23def4e6c14b"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-ziutek-telnet-0.0.0-20180329124119-c3b780dc415b",
+      "name": "go:github.com/ziutek/telnet",
+      "versionInfo": "0.0.0-20180329124119-c3b780dc415b",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fziutek%2Ftelnet@0.0.0-20180329124119-c3b780dc415b"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fziutek%2Ftelnet@0.0.0-20180329124119-c3b780dc415b"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-google.golang.org-grpc-1.31.0",
+      "name": "go:google.golang.org/grpc",
+      "versionInfo": "1.31.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/google.golang.org%2Fgrpc@1.31.0"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/google.golang.org%2Fgrpc@1.31.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-lint-0.0.0-20190313153728-d0100b6bd8b3",
+      "name": "go:golang.org/x/lint",
+      "versionInfo": "0.0.0-20190313153728-d0100b6bd8b3",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Flint@0.0.0-20190313153728-d0100b6bd8b3"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Flint@0.0.0-20190313153728-d0100b6bd8b3"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-crypto-0.0.0-20200728195943-123391ffb6de",
+      "name": "go:golang.org/x/crypto",
+      "versionInfo": "0.0.0-20200728195943-123391ffb6de",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fcrypto@0.0.0-20200728195943-123391ffb6de"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fcrypto@0.0.0-20200728195943-123391ffb6de"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-google-goterm-0.0.0-20190703233501-fc88cf888a3f",
+      "name": "go:github.com/google/goterm",
+      "versionInfo": "0.0.0-20190703233501-fc88cf888a3f",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fgoterm@0.0.0-20190703233501-fc88cf888a3f"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fgoterm@0.0.0-20190703233501-fc88cf888a3f"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-tools-0.0.0-20190524140312-2c0ae7006135",
+      "name": "go:golang.org/x/tools",
+      "versionInfo": "0.0.0-20190524140312-2c0ae7006135",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Ftools@0.0.0-20190524140312-2c0ae7006135"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Ftools@0.0.0-20190524140312-2c0ae7006135"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-honnef.co-go-tools-0.0.0-20190523083050-ea95bdfd59fc",
+      "name": "go:honnef.co/go/tools",
+      "versionInfo": "0.0.0-20190523083050-ea95bdfd59fc",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/honnef.co%2Fgo%2Ftools@0.0.0-20190523083050-ea95bdfd59fc"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/honnef.co%2Fgo%2Ftools@0.0.0-20190523083050-ea95bdfd59fc"
+        }
+      ],
+      "filesAnalyzed": false
+    }
+  ]
+}

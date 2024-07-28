@@ -34,12 +34,40 @@ func DownloadSBOMFromGitHub(repo RepoData, token string) (string, error) {
 		return "", fmt.Errorf("failed to get SBOM from GitHub: %w", err)
 	}
 
-	sbomJSON, err := json.Marshal(sbom)
+	sbomJSON, err := serializeSBOM(sbom)
 	if err != nil {
 		return "", fmt.Errorf("failed to serialize SBOM to JSON: %w", err)
 	}
 
-	return string(sbomJSON), nil
+	return sbomJSON, nil
+}
+
+func serializeSBOM(sbom *github.SBOM) (string, error) {
+	// Convert *github.SBOM to JSON bytes
+	sbomBytes, err := json.Marshal(sbom)
+	if err != nil {
+		return "", fmt.Errorf("failed to marshal SBOM: %w", err)
+	}
+
+	// Unmarshal JSON bytes to map[string]interface{}
+	var sbomMap map[string]interface{}
+	if err := json.Unmarshal(sbomBytes, &sbomMap); err != nil {
+		return "", fmt.Errorf("failed to unmarshal SBOM: %w", err)
+	}
+
+	// Extract the inner content of the SBOM
+	innerContent, ok := sbomMap["sbom"].(map[string]interface{})
+	if !ok {
+		return "", fmt.Errorf("invalid SBOM format")
+	}
+
+	// Marshal the inner content to JSON
+	innerContentJSON, err := json.Marshal(innerContent)
+	if err != nil {
+		return "", fmt.Errorf("failed to serialize inner content to JSON: %w", err)
+	}
+
+	return string(innerContentJSON), nil
 }
 
 // SaveSBOMToFile saves the SBOM content to a file

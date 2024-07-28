@@ -6,7 +6,7 @@ import (
 	"encoding/csv"
 	"fmt"
 	"os"
-	"strconv"
+	"reflect"
 	"strings"
 
 	_ "github.com/mattn/go-sqlite3"
@@ -38,26 +38,26 @@ func LoadCSVToSQLite(filePath string, db *sql.DB, options LoadOptions) error {
 
 	// Map CSV column names to SQLite column names
 	columnMap := map[string]string{
-		"repo.url":                    "repo_url",
-		"repo.language":               "repo_language",
-		"repo.license":                "repo_license",
-		"repo.star_count":             "repo_star_count",
-		"repo.created_at":             "repo_created_at",
-		"repo.updated_at":             "repo_updated_at",
-		"legacy.created_since":        "legacy_created_since",
-		"legacy.updated_since":        "legacy_updated_since",
-		"legacy.contributor_count":    "legacy_contributor_count",
-		"legacy.org_count":            "legacy_org_count",
-		"legacy.commit_frequency":     "legacy_commit_frequency",
-		"legacy.recent_release_count": "legacy_recent_release_count",
-		"legacy.updated_issues_count": "legacy_updated_issues_count",
-		"legacy.closed_issues_count":  "legacy_closed_issues_count",
-		"legacy.issue_comment_freq":   "legacy_issue_comment_frequency",
-		"legacy.github_mention_count": "legacy_github_mention_count",
-		"depsdev.dependent_count":     "depsdev_dependent_count",
-		"default_score":               "default_score",
-		"collection_date":             "collection_date",
-		"worker_commit_id":            "worker_commit_id",
+		"repo.url":                       "repo_url",
+		"repo.language":                  "repo_language",
+		"repo.license":                   "repo_license",
+		"repo.star_count":                "repo_star_count",
+		"repo.created_at":                "repo_created_at",
+		"repo.updated_at":                "repo_updated_at",
+		"legacy.created_since":           "legacy_created_since",
+		"legacy.updated_since":           "legacy_updated_since",
+		"legacy.contributor_count":       "legacy_contributor_count",
+		"legacy.org_count":               "legacy_org_count",
+		"legacy.commit_frequency":        "legacy_commit_frequency",
+		"legacy.recent_release_count":    "legacy_recent_release_count",
+		"legacy.updated_issues_count":    "legacy_updated_issues_count",
+		"legacy.closed_issues_count":     "legacy_closed_issues_count",
+		"legacy.issue_comment_frequency": "legacy_issue_comment_frequency", // Updated key to match CSV file
+		"legacy.github_mention_count":    "legacy_github_mention_count",
+		"depsdev.dependent_count":        "depsdev_dependent_count",
+		"default_score":                  "default_score",
+		"collection_date":                "collection_date",
+		"worker_commit_id":               "worker_commit_id",
 	}
 
 	// Quote and map column names
@@ -163,6 +163,62 @@ func ParseFilterCriteria(criteriaStr string) (FilterCriteria, error) {
 	}, nil
 }
 
+// HandleNullString handles sql.NullString.
+func HandleNullString(ns sql.NullString) string {
+	if ns.Valid {
+		return ns.String
+	}
+	return ""
+}
+
+// HandleNullInt64 handles sql.NullInt64.
+func HandleNullInt64(ni sql.NullInt64) int {
+	if ni.Valid {
+		return int(ni.Int64)
+	}
+	return 0
+}
+
+// HandleNullFloat64 handles sql.NullFloat64.
+func HandleNullFloat64(nf sql.NullFloat64) float64 {
+	if nf.Valid {
+		return nf.Float64
+	}
+	return 0.0
+}
+
+// HandleNullBool handles sql.NullBool.
+func HandleNullBool(nb sql.NullBool) bool {
+	if nb.Valid {
+		return nb.Bool
+	}
+	return false
+}
+
+// HandleNullValue handles sql.Null* types.
+func HandleNullValue(value interface{}) interface{} {
+	if value == nil {
+		return nil
+	}
+	v := reflect.ValueOf(value)
+	switch v.Kind() {
+	case reflect.Struct:
+		switch v.Type() {
+		case reflect.TypeOf(sql.NullString{}):
+			return HandleNullString(value.(sql.NullString))
+		case reflect.TypeOf(sql.NullInt64{}):
+			return HandleNullInt64(value.(sql.NullInt64))
+		case reflect.TypeOf(sql.NullFloat64{}):
+			return HandleNullFloat64(value.(sql.NullFloat64))
+		case reflect.TypeOf(sql.NullBool{}):
+			return HandleNullBool(value.(sql.NullBool))
+		}
+	case reflect.Int64:
+		return int(v.Int())
+	}
+	return value
+}
+
 // FilterSQLiteData filters data in SQLite based on multiple criteria and returns a slice of RepoData structs
 func FilterSQLiteData(db *sql.DB, criteria []FilterCriteria) ([]RepoData, error) {
 	var filteredRecords []RepoData
@@ -187,27 +243,70 @@ func FilterSQLiteData(db *sql.DB, criteria []FilterCriteria) ([]RepoData, error)
 	}
 	defer rows.Close()
 
+	columns, err := rows.Columns()
+	if err != nil {
+		return nil, fmt.Errorf("failed to get columns: %w", err)
+	}
+
 	for rows.Next() {
-		var repo RepoData
-		var depsDevDependentCount sql.NullString
-		err := rows.Scan(
-			&repo.RepoURL, &repo.RepoLanguage, &repo.RepoLicense, &repo.RepoStarCount,
-			&repo.RepoCreatedAt, &repo.RepoUpdatedAt, &repo.LegacyCreatedSince, &repo.LegacyUpdatedSince,
-			&repo.LegacyContributorCount, &repo.LegacyOrgCount, &repo.LegacyCommitFrequency, &repo.LegacyRecentReleaseCount,
-			&repo.LegacyUpdatedIssuesCount, &repo.LegacyClosedIssuesCount, &repo.LegacyIssueCommentFreq, &repo.LegacyGithubMentionCount,
-			&depsDevDependentCount, &repo.DefaultScore, &repo.CollectionDate, &repo.WorkerCommitID,
-		)
-		if err != nil {
+		columnPointers := make([]interface{}, len(columns))
+		columnValues := make([]interface{}, len(columns))
+		for i := range columnValues {
+			columnPointers[i] = &columnValues[i]
+		}
+
+		if err := rows.Scan(columnPointers...); err != nil {
 			return nil, fmt.Errorf("failed to scan row: %w", err)
 		}
-		if depsDevDependentCount.Valid && depsDevDependentCount.String != "" {
-			count, err := strconv.Atoi(depsDevDependentCount.String)
-			if err != nil {
-				return nil, fmt.Errorf("failed to convert depsdev_dependent_count to int: %w", err)
+
+		var repo RepoData
+		for i, colName := range columns {
+			val := HandleNullValue(columnValues[i])
+			if val == nil {
+				continue
 			}
-			repo.DepsDevDependentCount = count
-		} else {
-			repo.DepsDevDependentCount = 0
+			switch colName {
+			case "repo_url":
+				repo.RepoURL = val.(string)
+			case "repo_language":
+				repo.RepoLanguage = val.(string)
+			case "repo_license":
+				repo.RepoLicense = val.(string)
+			case "repo_star_count":
+				repo.RepoStarCount = val.(int)
+			case "repo_created_at":
+				repo.RepoCreatedAt = val.(string)
+			case "repo_updated_at":
+				repo.RepoUpdatedAt = val.(string)
+			case "legacy_created_since":
+				repo.LegacyCreatedSince = val.(int)
+			case "legacy_updated_since":
+				repo.LegacyUpdatedSince = val.(int)
+			case "legacy_contributor_count":
+				repo.LegacyContributorCount = val.(int)
+			case "legacy_org_count":
+				repo.LegacyOrgCount = val.(int)
+			case "legacy_commit_frequency":
+				repo.LegacyCommitFrequency = val.(float64)
+			case "legacy_recent_release_count":
+				repo.LegacyRecentReleaseCount = val.(int)
+			case "legacy_updated_issues_count":
+				repo.LegacyUpdatedIssuesCount = val.(int)
+			case "legacy_closed_issues_count":
+				repo.LegacyClosedIssuesCount = val.(int)
+			case "legacy_issue_comment_freq":
+				repo.LegacyIssueCommentFreq = val.(float64)
+			case "legacy_github_mention_count":
+				repo.LegacyGithubMentionCount = val.(int)
+			case "depsdev_dependent_count":
+				repo.DepsDevDependentCount = val.(int)
+			case "default_score":
+				repo.DefaultScore = val.(float64)
+			case "collection_date":
+				repo.CollectionDate = val.(string)
+			case "worker_commit_id":
+				repo.WorkerCommitID = val.(string)
+			}
 		}
 		filteredRecords = append(filteredRecords, repo)
 	}

@@ -1,1 +1,26 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:44:19Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/gofuzz","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-gofuzz"],"documentNamespace":"https://github.com/google/gofuzz/dependency_graph/sbom-7ae774f1ebdfbe98","packages":[{"SPDXID":"SPDXRef-com.github.google-gofuzz","name":"com.github.google/gofuzz","versionInfo":"","downloadLocation":"git+https://github.com/google/gofuzz","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:21:50Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/gofuzz",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-gofuzz"
+  ],
+  "documentNamespace": "https://github.com/google/gofuzz/dependency_graph/sbom-097247a21032bc33",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-gofuzz",
+      "name": "com.github.google/gofuzz",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/gofuzz",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    }
+  ]
+}

@@ -1,1 +1,281 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:47:41Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/deps.dev","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-deps.dev"],"documentNamespace":"https://github.com/google/deps.dev/dependency_graph/sbom-dd274f3a5ec61b25","packages":[{"SPDXID":"SPDXRef-com.github.google-deps.dev","name":"com.github.google/deps.dev","versionInfo":"","downloadLocation":"git+https://github.com/google/deps.dev","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"},{"SPDXID":"SPDXRef-go-github.com-golang-protobuf-1.5.3","name":"go:github.com/golang/protobuf","versionInfo":"1.5.3","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-text-0.14.0","name":"go:golang.org/x/text","versionInfo":"0.14.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-google.golang.org-grpc-1.56.3","name":"go:google.golang.org/grpc","versionInfo":"1.56.3","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-google.golang.org-genproto-0.0.0-20230410155749-daa745c078e1","name":"go:google.golang.org/genproto","versionInfo":"0.0.0-20230410155749-daa745c078e1","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-google.golang.org-protobuf-1.33.0","name":"go:google.golang.org/protobuf","versionInfo":"1.33.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-net-0.24.0","name":"go:golang.org/x/net","versionInfo":"0.24.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-sys-0.19.0","name":"go:golang.org/x/sys","versionInfo":"0.19.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-deps.dev-util-semver-0.0.0-20240109040450-1e316b822bc4","name":"go:deps.dev/util/semver","versionInfo":"0.0.0-20240109040450-1e316b822bc4","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-deps.dev-api-v3-3.0.0-20240311054650-e1e6a3d70fb7","name":"go:deps.dev/api/v3","versionInfo":"3.0.0-20240311054650-e1e6a3d70fb7","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-deps.dev-util-maven-0.0.0-20240508074152-8a0b6d3a5b11","name":"go:deps.dev/util/maven","versionInfo":"0.0.0-20240508074152-8a0b6d3a5b11","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-deps.dev-util-resolve-0.0.0-20240611045547-af20eef0f1eb","name":"go:deps.dev/util/resolve","versionInfo":"0.0.0-20240611045547-af20eef0f1eb","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-time-0.5.0","name":"go:golang.org/x/time","versionInfo":"0.5.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-sync-0.6.0","name":"go:golang.org/x/sync","versionInfo":"0.6.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-deps.dev-api-v3alpha-0.0.0-20240701033337-efe6530670b9","name":"go:deps.dev/api/v3alpha","versionInfo":"0.0.0-20240701033337-efe6530670b9","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-deps.dev-util-resolve-0.0.0-20240312000934-38ffc8dd1d92","name":"go:deps.dev/util/resolve","versionInfo":"0.0.0-20240312000934-38ffc8dd1d92","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-deps.dev-util-maven-0.0.0-20240322043601-ff53416fec6a","name":"go:deps.dev/util/maven","versionInfo":"0.0.0-20240322043601-ff53416fec6a","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-google-go-cmp-0.6.0","name":"go:github.com/google/go-cmp","versionInfo":"0.6.0","downloadLocation":"NOASSERTION","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:51:10Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/deps.dev",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-deps.dev"
+  ],
+  "documentNamespace": "https://github.com/google/deps.dev/dependency_graph/sbom-9c42a0e87fab6e59",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-deps.dev",
+      "name": "com.github.google/deps.dev",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/deps.dev",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-golang-protobuf-1.5.3",
+      "name": "go:github.com/golang/protobuf",
+      "versionInfo": "1.5.3",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgolang%2Fprotobuf@1.5.3"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-text-0.14.0",
+      "name": "go:golang.org/x/text",
+      "versionInfo": "0.14.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Ftext@0.14.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-google.golang.org-grpc-1.56.3",
+      "name": "go:google.golang.org/grpc",
+      "versionInfo": "1.56.3",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/google.golang.org%2Fgrpc@1.56.3"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-google.golang.org-genproto-0.0.0-20230410155749-daa745c078e1",
+      "name": "go:google.golang.org/genproto",
+      "versionInfo": "0.0.0-20230410155749-daa745c078e1",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/google.golang.org%2Fgenproto@0.0.0-20230410155749-daa745c078e1"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-google.golang.org-protobuf-1.33.0",
+      "name": "go:google.golang.org/protobuf",
+      "versionInfo": "1.33.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/google.golang.org%2Fprotobuf@1.33.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-net-0.24.0",
+      "name": "go:golang.org/x/net",
+      "versionInfo": "0.24.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fnet@0.24.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-sys-0.19.0",
+      "name": "go:golang.org/x/sys",
+      "versionInfo": "0.19.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fsys@0.19.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-deps.dev-util-semver-0.0.0-20240109040450-1e316b822bc4",
+      "name": "go:deps.dev/util/semver",
+      "versionInfo": "0.0.0-20240109040450-1e316b822bc4",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/deps.dev%2Futil%2Fsemver@0.0.0-20240109040450-1e316b822bc4"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-deps.dev-api-v3-3.0.0-20240311054650-e1e6a3d70fb7",
+      "name": "go:deps.dev/api/v3",
+      "versionInfo": "3.0.0-20240311054650-e1e6a3d70fb7",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/deps.dev%2Fapi%2Fv3@3.0.0-20240311054650-e1e6a3d70fb7"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-deps.dev-util-maven-0.0.0-20240508074152-8a0b6d3a5b11",
+      "name": "go:deps.dev/util/maven",
+      "versionInfo": "0.0.0-20240508074152-8a0b6d3a5b11",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/deps.dev%2Futil%2Fmaven@0.0.0-20240508074152-8a0b6d3a5b11"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-deps.dev-util-resolve-0.0.0-20240611045547-af20eef0f1eb",
+      "name": "go:deps.dev/util/resolve",
+      "versionInfo": "0.0.0-20240611045547-af20eef0f1eb",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/deps.dev%2Futil%2Fresolve@0.0.0-20240611045547-af20eef0f1eb"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-time-0.5.0",
+      "name": "go:golang.org/x/time",
+      "versionInfo": "0.5.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Ftime@0.5.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-sync-0.6.0",
+      "name": "go:golang.org/x/sync",
+      "versionInfo": "0.6.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fsync@0.6.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-deps.dev-api-v3alpha-0.0.0-20240701033337-efe6530670b9",
+      "name": "go:deps.dev/api/v3alpha",
+      "versionInfo": "0.0.0-20240701033337-efe6530670b9",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/deps.dev%2Fapi%2Fv3alpha@0.0.0-20240701033337-efe6530670b9"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-deps.dev-util-resolve-0.0.0-20240312000934-38ffc8dd1d92",
+      "name": "go:deps.dev/util/resolve",
+      "versionInfo": "0.0.0-20240312000934-38ffc8dd1d92",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/deps.dev%2Futil%2Fresolve@0.0.0-20240312000934-38ffc8dd1d92"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-deps.dev-util-maven-0.0.0-20240322043601-ff53416fec6a",
+      "name": "go:deps.dev/util/maven",
+      "versionInfo": "0.0.0-20240322043601-ff53416fec6a",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/deps.dev%2Futil%2Fmaven@0.0.0-20240322043601-ff53416fec6a"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-google-go-cmp-0.6.0",
+      "name": "go:github.com/google/go-cmp",
+      "versionInfo": "0.6.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fgo-cmp@0.6.0"
+        }
+      ],
+      "filesAnalyzed": false
+    }
+  ]
+}

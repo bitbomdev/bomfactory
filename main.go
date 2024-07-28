@@ -111,16 +111,42 @@ func main() {
 			{
 				Name:    "convert-to-purl",
 				Aliases: []string{"cp"},
-				Usage:   "Convert SPDX file to include PURLs",
+				Usage:   "Convert SPDX file(s) to include PURLs",
 				Flags: []cli.Flag{
 					&cli.StringFlag{
 						Name:     "file",
 						Aliases:  []string{"f"},
 						Usage:    "Path to the SPDX JSON file",
-						Required: true,
+						Required: false,
+					},
+					&cli.StringFlag{
+						Name:     "dir",
+						Aliases:  []string{"d"},
+						Usage:    "Path to the directory containing SPDX JSON files",
+						Required: false,
 					},
 				},
 				Action: convertToPURL,
+			},
+			{
+				Name:    "validate-sbom",
+				Aliases: []string{"vs"},
+				Usage:   "Validate an SBOM file or all SBOM files in a directory",
+				Flags: []cli.Flag{
+					&cli.StringFlag{
+						Name:     "file",
+						Aliases:  []string{"f"},
+						Usage:    "Path to the SBOM file",
+						Required: false,
+					},
+					&cli.StringFlag{
+						Name:     "dir",
+						Aliases:  []string{"d"},
+						Usage:    "Path to the directory containing SBOM files",
+						Required: false,
+					},
+				},
+				Action: validateSBOM,
 			},
 		},
 	}
@@ -314,10 +340,83 @@ func downloadSBOMs(c *cli.Context) error {
 
 func convertToPURL(c *cli.Context) error {
 	filePath := c.String("file")
-	err := sbom.UpdateSPDXWithPURLs(filePath)
-	if err != nil {
-		return fmt.Errorf("failed to convert SPDX to PURLs: %w", err)
+	dirPath := c.String("dir")
+
+	if filePath == "" && dirPath == "" {
+		return fmt.Errorf("either --file or --dir must be specified")
 	}
-	fmt.Printf("Successfully converted SPDX file to include PURLs: %s\n", filePath)
+
+	if filePath != "" {
+		err := sbom.UpdateSPDXWithPURLs(filePath)
+		if err != nil {
+			return fmt.Errorf("failed to convert SPDX to PURLs: %w", err)
+		}
+		fmt.Printf("Successfully converted SPDX file to include PURLs: %s\n", filePath)
+		return nil
+	}
+
+	if dirPath != "" {
+		files, err := os.ReadDir(dirPath)
+		if err != nil {
+			return fmt.Errorf("failed to read directory: %w", err)
+		}
+
+		for _, file := range files {
+			if !file.IsDir() && strings.HasSuffix(file.Name(), ".json") {
+				filePath := fmt.Sprintf("%s/%s", dirPath, file.Name())
+				err := sbom.UpdateSPDXWithPURLs(filePath)
+				if err != nil {
+					fmt.Printf("Failed to convert SPDX to PURLs for file %s: %v\n", filePath, err)
+					continue
+				}
+				fmt.Printf("Successfully converted SPDX file to include PURLs: %s\n", filePath)
+			}
+		}
+		return nil
+	}
+
+	return nil
+}
+
+func validateSBOM(c *cli.Context) error {
+	filePath := c.String("file")
+	dirPath := c.String("dir")
+
+	if filePath == "" && dirPath == "" {
+		return fmt.Errorf("either --file or --dir must be specified")
+	}
+
+	var failedFiles []string
+
+	if filePath != "" {
+		err := sbom.ValidateSBOM(filePath)
+		if err != nil {
+			failedFiles = append(failedFiles, fmt.Sprintf("%s: %v", filePath, err))
+		}
+	} else if dirPath != "" {
+		files, err := os.ReadDir(dirPath)
+		if err != nil {
+			return fmt.Errorf("failed to read directory: %w", err)
+		}
+
+		for _, file := range files {
+			if !file.IsDir() && strings.HasSuffix(file.Name(), ".json") {
+				filePath := fmt.Sprintf("%s/%s", dirPath, file.Name())
+				err := sbom.ValidateSBOM(filePath)
+				if err != nil {
+					failedFiles = append(failedFiles, fmt.Sprintf("%s: %v", filePath, err))
+				}
+			}
+		}
+	}
+
+	if len(failedFiles) > 0 {
+		for _, failure := range failedFiles {
+			fmt.Println(failure)
+		}
+		return fmt.Errorf("validation failed for %d file(s)", len(failedFiles))
+	}
+
+	fmt.Println("All SBOM files validated successfully")
 	return nil
 }

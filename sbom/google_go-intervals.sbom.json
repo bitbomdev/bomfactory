@@ -1,1 +1,46 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:50:39Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/go-intervals","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-go-intervals"],"documentNamespace":"https://github.com/google/go-intervals/dependency_graph/sbom-919b351f6e6ccd44","packages":[{"SPDXID":"SPDXRef-com.github.google-go-intervals","name":"com.github.google/go-intervals","versionInfo":"","downloadLocation":"git+https://github.com/google/go-intervals","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"},{"SPDXID":"SPDXRef-go-github.com-google-go-cmp-0.5.9","name":"go:github.com/google/go-cmp","versionInfo":"0.5.9","downloadLocation":"NOASSERTION","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:28:54Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/go-intervals",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-go-intervals"
+  ],
+  "documentNamespace": "https://github.com/google/go-intervals/dependency_graph/sbom-d7313a29b0d20e2c",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-go-intervals",
+      "name": "com.github.google/go-intervals",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/go-intervals",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-google-go-cmp-0.5.9",
+      "name": "go:github.com/google/go-cmp",
+      "versionInfo": "0.5.9",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fgo-cmp@0.5.9"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fgo-cmp@0.5.9"
+        }
+      ],
+      "filesAnalyzed": false
+    }
+  ]
+}

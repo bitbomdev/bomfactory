@@ -1,1 +1,26 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:51:24Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/navc","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-navc"],"documentNamespace":"https://github.com/google/navc/dependency_graph/sbom-f1930eed916df0ba","packages":[{"SPDXID":"SPDXRef-com.github.google-navc","name":"com.github.google/navc","versionInfo":"","downloadLocation":"git+https://github.com/google/navc","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:29:40Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/navc",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-navc"
+  ],
+  "documentNamespace": "https://github.com/google/navc/dependency_graph/sbom-93663648a34dd725",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-navc",
+      "name": "com.github.google/navc",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/navc",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    }
+  ]
+}

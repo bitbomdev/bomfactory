@@ -10,19 +10,17 @@ import (
 )
 
 type SPDX struct {
-	Sbom struct {
-		SPDXID       string `json:"SPDXID"`
-		SpdxVersion  string `json:"spdxVersion"`
-		CreationInfo struct {
-			Created  string   `json:"created"`
-			Creators []string `json:"creators"`
-		} `json:"creationInfo"`
-		Name              string    `json:"name"`
-		DataLicense       string    `json:"dataLicense"`
-		DocumentDescribes []string  `json:"documentDescribes"`
-		DocumentNamespace string    `json:"documentNamespace"`
-		Packages          []Package `json:"packages"`
-	} `json:"sbom"`
+	SPDXID       string `json:"SPDXID"`
+	SpdxVersion  string `json:"spdxVersion"`
+	CreationInfo struct {
+		Created  string   `json:"created"`
+		Creators []string `json:"creators"`
+	} `json:"creationInfo"`
+	Name              string    `json:"name"`
+	DataLicense       string    `json:"dataLicense"`
+	DocumentDescribes []string  `json:"documentDescribes"`
+	DocumentNamespace string    `json:"documentNamespace"`
+	Packages          []Package `json:"packages"`
 }
 
 type Package struct {
@@ -56,7 +54,7 @@ func UpdateSPDXWithPURLs(filePath string) error {
 	}
 
 	// Update the struct to include PURLs
-	for i, pkg := range spdx.Sbom.Packages {
+	for i, pkg := range spdx.Packages {
 		var purl *packageurl.PackageURL
 		nameParts := strings.Split(pkg.Name, ":")
 		if len(nameParts) < 2 {
@@ -349,7 +347,7 @@ func UpdateSPDXWithPURLs(filePath string) error {
 			continue
 		}
 
-		spdx.Sbom.Packages[i].ExternalRefs = append(spdx.Sbom.Packages[i].ExternalRefs, ExternalRef{
+		spdx.Packages[i].ExternalRefs = append(spdx.Packages[i].ExternalRefs, ExternalRef{
 			ReferenceCategory: "PACKAGE-MANAGER",
 			ReferenceType:     "purl",
 			ReferenceLocator:  purl.ToString(),
@@ -362,7 +360,7 @@ func UpdateSPDXWithPURLs(filePath string) error {
 		return fmt.Errorf("error marshalling JSON: %w", err)
 	}
 
-	err = os.WriteFile(filePath, updatedFile, 0644)
+	err = os.WriteFile(filePath, updatedFile, 0o600)
 	if err != nil {
 		return fmt.Errorf("error writing file: %w", err)
 	}

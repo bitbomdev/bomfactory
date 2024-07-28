@@ -1,1 +1,26 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:48:36Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/skylark","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-skylark"],"documentNamespace":"https://github.com/google/skylark/dependency_graph/sbom-c85cdb2d044e1dbb","packages":[{"SPDXID":"SPDXRef-com.github.google-skylark","name":"com.github.google/skylark","versionInfo":"","downloadLocation":"git+https://github.com/google/skylark","filesAnalyzed":false,"licenseDeclared":"BSD-3-Clause"}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:26:37Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/skylark",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-skylark"
+  ],
+  "documentNamespace": "https://github.com/google/skylark/dependency_graph/sbom-5f21b0f9671f61a4",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-skylark",
+      "name": "com.github.google/skylark",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/skylark",
+      "licenseDeclared": "BSD-3-Clause",
+      "filesAnalyzed": false
+    }
+  ]
+}

@@ -1,1 +1,26 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:49:29Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/godepq","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-godepq"],"documentNamespace":"https://github.com/google/godepq/dependency_graph/sbom-16d288d625fc3f69","packages":[{"SPDXID":"SPDXRef-com.github.google-godepq","name":"com.github.google/godepq","versionInfo":"","downloadLocation":"git+https://github.com/google/godepq","filesAnalyzed":false,"licenseDeclared":"MIT"}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:27:35Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/godepq",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-godepq"
+  ],
+  "documentNamespace": "https://github.com/google/godepq/dependency_graph/sbom-55ef565bbbac92df",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-godepq",
+      "name": "com.github.google/godepq",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/godepq",
+      "licenseDeclared": "MIT",
+      "filesAnalyzed": false
+    }
+  ]
+}

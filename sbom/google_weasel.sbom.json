@@ -1,1 +1,86 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:50:49Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/weasel","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-weasel"],"documentNamespace":"https://github.com/google/weasel/dependency_graph/sbom-c4e61ca46cfaca64","packages":[{"SPDXID":"SPDXRef-com.github.google-weasel","name":"com.github.google/weasel","versionInfo":"","downloadLocation":"git+https://github.com/google/weasel","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"},{"SPDXID":"SPDXRef-go-golang.org-x-oauth2-0.0.0-20190604053449-0f29369cfe45","name":"go:golang.org/x/oauth2","versionInfo":"0.0.0-20190604053449-0f29369cfe45","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-net-0.0.0-20190923162816-aa69164e4478","name":"go:golang.org/x/net","versionInfo":"0.0.0-20190923162816-aa69164e4478","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-google.golang.org-appengine-1.6.3","name":"go:google.golang.org/appengine","versionInfo":"1.6.3","downloadLocation":"NOASSERTION","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:29:03Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/weasel",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-weasel"
+  ],
+  "documentNamespace": "https://github.com/google/weasel/dependency_graph/sbom-df62c2347ad6f36d",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-weasel",
+      "name": "com.github.google/weasel",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/weasel",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-oauth2-0.0.0-20190604053449-0f29369cfe45",
+      "name": "go:golang.org/x/oauth2",
+      "versionInfo": "0.0.0-20190604053449-0f29369cfe45",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Foauth2@0.0.0-20190604053449-0f29369cfe45"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Foauth2@0.0.0-20190604053449-0f29369cfe45"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-net-0.0.0-20190923162816-aa69164e4478",
+      "name": "go:golang.org/x/net",
+      "versionInfo": "0.0.0-20190923162816-aa69164e4478",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fnet@0.0.0-20190923162816-aa69164e4478"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fnet@0.0.0-20190923162816-aa69164e4478"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-google.golang.org-appengine-1.6.3",
+      "name": "go:google.golang.org/appengine",
+      "versionInfo": "1.6.3",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/google.golang.org%2Fappengine@1.6.3"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/google.golang.org%2Fappengine@1.6.3"
+        }
+      ],
+      "filesAnalyzed": false
+    }
+  ]
+}

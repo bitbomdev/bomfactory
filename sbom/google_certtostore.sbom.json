@@ -1,1 +1,206 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:48:56Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/certtostore","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-certtostore"],"documentNamespace":"https://github.com/google/certtostore/dependency_graph/sbom-269a7b3edfe2875c","packages":[{"SPDXID":"SPDXRef-com.github.google-certtostore","name":"com.github.google/certtostore","versionInfo":"","downloadLocation":"git+https://github.com/google/certtostore","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"},{"SPDXID":"SPDXRef-go-github.com-hashicorp-go-multierror-1.1.1","name":"go:github.com/hashicorp/go-multierror","versionInfo":"1.1.1","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-go-ole-go-ole-1.2.6","name":"go:github.com/go-ole/go-ole","versionInfo":"1.2.6","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-hashicorp-errwrap-1.0.0","name":"go:github.com/hashicorp/errwrap","versionInfo":"1.0.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-crypto-0.17.0","name":"go:golang.org/x/crypto","versionInfo":"0.17.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-sys-0.15.0","name":"go:golang.org/x/sys","versionInfo":"0.15.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-google-deck-0.0.0-20230104221208-105ad94aa8ae","name":"go:github.com/google/deck","versionInfo":"0.0.0-20230104221208-105ad94aa8ae","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-yusufpapurcu-wmi-1.2.4","name":"go:github.com/yusufpapurcu/wmi","versionInfo":"1.2.4","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-actions-checkout-3.*.*","name":"actions:actions/checkout","versionInfo":"3.*.*","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-actions-setup-go-3.*.*","name":"actions:actions/setup-go","versionInfo":"3.*.*","downloadLocation":"NOASSERTION","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:27:00Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/certtostore",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-certtostore"
+  ],
+  "documentNamespace": "https://github.com/google/certtostore/dependency_graph/sbom-bcbf846eeb21019a",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-certtostore",
+      "name": "com.github.google/certtostore",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/certtostore",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-hashicorp-go-multierror-1.1.1",
+      "name": "go:github.com/hashicorp/go-multierror",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fhashicorp%2Fgo-multierror@1.1.1"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fhashicorp%2Fgo-multierror@1.1.1"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-go-ole-go-ole-1.2.6",
+      "name": "go:github.com/go-ole/go-ole",
+      "versionInfo": "1.2.6",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgo-ole%2Fgo-ole@1.2.6"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgo-ole%2Fgo-ole@1.2.6"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-hashicorp-errwrap-1.0.0",
+      "name": "go:github.com/hashicorp/errwrap",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fhashicorp%2Ferrwrap@1.0.0"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fhashicorp%2Ferrwrap@1.0.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-crypto-0.17.0",
+      "name": "go:golang.org/x/crypto",
+      "versionInfo": "0.17.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fcrypto@0.17.0"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fcrypto@0.17.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-sys-0.15.0",
+      "name": "go:golang.org/x/sys",
+      "versionInfo": "0.15.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fsys@0.15.0"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fsys@0.15.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-google-deck-0.0.0-20230104221208-105ad94aa8ae",
+      "name": "go:github.com/google/deck",
+      "versionInfo": "0.0.0-20230104221208-105ad94aa8ae",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fdeck@0.0.0-20230104221208-105ad94aa8ae"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fdeck@0.0.0-20230104221208-105ad94aa8ae"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-yusufpapurcu-wmi-1.2.4",
+      "name": "go:github.com/yusufpapurcu/wmi",
+      "versionInfo": "1.2.4",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fyusufpapurcu%2Fwmi@1.2.4"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fyusufpapurcu%2Fwmi@1.2.4"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-checkout-3.*.*",
+      "name": "actions:actions/checkout",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@3.%2A.%2A"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@3.%2A.%2A"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-setup-go-3.*.*",
+      "name": "actions:actions/setup-go",
+      "versionInfo": "3.*.*",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fsetup-go@3.%2A.%2A"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fsetup-go@3.%2A.%2A"
+        }
+      ],
+      "filesAnalyzed": false
+    }
+  ]
+}

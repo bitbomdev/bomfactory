@@ -1,1 +1,26 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:50:46Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/hilbert","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-hilbert"],"documentNamespace":"https://github.com/google/hilbert/dependency_graph/sbom-0dd58cf343e1962c","packages":[{"SPDXID":"SPDXRef-com.github.google-hilbert","name":"com.github.google/hilbert","versionInfo":"","downloadLocation":"git+https://github.com/google/hilbert","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:29:00Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/hilbert",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-hilbert"
+  ],
+  "documentNamespace": "https://github.com/google/hilbert/dependency_graph/sbom-54c8041a99977518",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-hilbert",
+      "name": "com.github.google/hilbert",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/hilbert",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    }
+  ]
+}

@@ -1,1 +1,26 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:49:38Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/battery-historian","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-battery-historian"],"documentNamespace":"https://github.com/google/battery-historian/dependency_graph/sbom-36cf8d14203dfce6","packages":[{"SPDXID":"SPDXRef-com.github.google-battery-historian","name":"com.github.google/battery-historian","versionInfo":"","downloadLocation":"git+https://github.com/google/battery-historian","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:27:46Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/battery-historian",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-battery-historian"
+  ],
+  "documentNamespace": "https://github.com/google/battery-historian/dependency_graph/sbom-22f533cb6cf44c08",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-battery-historian",
+      "name": "com.github.google/battery-historian",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/battery-historian",
+      "licenseDeclared": "",
+      "filesAnalyzed": false
+    }
+  ]
+}

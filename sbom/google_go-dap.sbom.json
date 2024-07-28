@@ -1,1 +1,66 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:47:02Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/go-dap","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-go-dap"],"documentNamespace":"https://github.com/google/go-dap/dependency_graph/sbom-973826da41e6028a","packages":[{"SPDXID":"SPDXRef-com.github.google-go-dap","name":"com.github.google/go-dap","versionInfo":"","downloadLocation":"git+https://github.com/google/go-dap","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"},{"SPDXID":"SPDXRef-actions-actions-checkout-3","name":"actions:actions/checkout","versionInfo":"3","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-actions-setup-go-4","name":"actions:actions/setup-go","versionInfo":"4","downloadLocation":"NOASSERTION","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:24:48Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/go-dap",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-go-dap"
+  ],
+  "documentNamespace": "https://github.com/google/go-dap/dependency_graph/sbom-413e5060b0e6dea7",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-go-dap",
+      "name": "com.github.google/go-dap",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/go-dap",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-checkout-3",
+      "name": "actions:actions/checkout",
+      "versionInfo": "3",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@3"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@3"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-setup-go-4",
+      "name": "actions:actions/setup-go",
+      "versionInfo": "4",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fsetup-go@4"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fsetup-go@4"
+        }
+      ],
+      "filesAnalyzed": false
+    }
+  ]
+}

@@ -1,1 +1,26 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:45:16Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/periph","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-periph"],"documentNamespace":"https://github.com/google/periph/dependency_graph/sbom-be0cf596927ccb7b","packages":[{"SPDXID":"SPDXRef-com.github.google-periph","name":"com.github.google/periph","versionInfo":"","downloadLocation":"git+https://github.com/google/periph","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:22:52Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/periph",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-periph"
+  ],
+  "documentNamespace": "https://github.com/google/periph/dependency_graph/sbom-3baa78cc32dbeee7",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-periph",
+      "name": "com.github.google/periph",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/periph",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    }
+  ]
+}

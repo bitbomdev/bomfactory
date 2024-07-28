@@ -1,1 +1,66 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:47:22Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/der-ascii","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-der-ascii"],"documentNamespace":"https://github.com/google/der-ascii/dependency_graph/sbom-a6865fb06d06740f","packages":[{"SPDXID":"SPDXRef-com.github.google-der-ascii","name":"com.github.google/der-ascii","versionInfo":"","downloadLocation":"git+https://github.com/google/der-ascii","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"},{"SPDXID":"SPDXRef-actions-actions-checkout-2","name":"actions:actions/checkout","versionInfo":"2","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-actions-setup-go-2","name":"actions:actions/setup-go","versionInfo":"2","downloadLocation":"NOASSERTION","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:25:10Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/der-ascii",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-der-ascii"
+  ],
+  "documentNamespace": "https://github.com/google/der-ascii/dependency_graph/sbom-c319e65ac76cadc1",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-der-ascii",
+      "name": "com.github.google/der-ascii",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/der-ascii",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-checkout-2",
+      "name": "actions:actions/checkout",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@2"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@2"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-setup-go-2",
+      "name": "actions:actions/setup-go",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fsetup-go@2"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fsetup-go@2"
+        }
+      ],
+      "filesAnalyzed": false
+    }
+  ]
+}

@@ -1,1 +1,86 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:50:07Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/gonids","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-gonids"],"documentNamespace":"https://github.com/google/gonids/dependency_graph/sbom-ef17381d1a242819","packages":[{"SPDXID":"SPDXRef-com.github.google-gonids","name":"com.github.google/gonids","versionInfo":"","downloadLocation":"git+https://github.com/google/gonids","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"},{"SPDXID":"SPDXRef-go-github.com-kylelemons-godebug-1.1.0","name":"go:github.com/kylelemons/godebug","versionInfo":"1.1.0","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-actions-checkout-2","name":"actions:actions/checkout","versionInfo":"2","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-golangci-golangci-lint-action-2","name":"actions:golangci/golangci-lint-action","versionInfo":"2","downloadLocation":"NOASSERTION","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:28:20Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/gonids",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-gonids"
+  ],
+  "documentNamespace": "https://github.com/google/gonids/dependency_graph/sbom-be23da88a7634cc1",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-gonids",
+      "name": "com.github.google/gonids",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/gonids",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-kylelemons-godebug-1.1.0",
+      "name": "go:github.com/kylelemons/godebug",
+      "versionInfo": "1.1.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fkylelemons%2Fgodebug@1.1.0"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fkylelemons%2Fgodebug@1.1.0"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-checkout-2",
+      "name": "actions:actions/checkout",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@2"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@2"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-golangci-golangci-lint-action-2",
+      "name": "actions:golangci/golangci-lint-action",
+      "versionInfo": "2",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/golangci%2Fgolangci-lint-action@2"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/golangci%2Fgolangci-lint-action@2"
+        }
+      ],
+      "filesAnalyzed": false
+    }
+  ]
+}

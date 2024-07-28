@@ -1,1 +1,266 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:45:09Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/addlicense","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-addlicense"],"documentNamespace":"https://github.com/google/addlicense/dependency_graph/sbom-74cbfa61f9dcca3f","packages":[{"SPDXID":"SPDXRef-com.github.google-addlicense","name":"com.github.google/addlicense","versionInfo":"","downloadLocation":"git+https://github.com/google/addlicense","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"},{"SPDXID":"SPDXRef-go-github.com-bmatcuk-doublestar-v4-4.0.2","name":"go:github.com/bmatcuk/doublestar/v4","versionInfo":"4.0.2","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-sync-0.0.0-20190911185100-cd5d95a43a6e","name":"go:golang.org/x/sync","versionInfo":"0.0.0-20190911185100-cd5d95a43a6e","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-actions-checkout-3","name":"actions:actions/checkout","versionInfo":"3","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-golangci-golangci-lint-action-3","name":"actions:golangci/golangci-lint-action","versionInfo":"3","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-actions-setup-go-3","name":"actions:actions/setup-go","versionInfo":"3","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-docker-login-action-f054a8b539a109f9f41c372932f1ae047eff08c9","name":"actions:docker/login-action","versionInfo":"f054a8b539a109f9f41c372932f1ae047eff08c9","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-docker-build-push-action-1bc1040caef9e604eb543693ba89b5bf4fc80935","name":"actions:docker/build-push-action","versionInfo":"1bc1040caef9e604eb543693ba89b5bf4fc80935","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-goreleaser-goreleaser-action-5a54d7e660bda43b405e8463261b3d25631ffe86","name":"actions:goreleaser/goreleaser-action","versionInfo":"5a54d7e660bda43b405e8463261b3d25631ffe86","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-docker-metadata-action-8b842e721d38d18bea23b57f4c040e53331f4ca2","name":"actions:docker/metadata-action","versionInfo":"8b842e721d38d18bea23b57f4c040e53331f4ca2","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-actions-cache-3","name":"actions:actions/cache","versionInfo":"3","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-codecov-codecov-action-3","name":"actions:codecov/codecov-action","versionInfo":"3","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-actions-styfle-cancel-workflow-action-89f242ee29e10c53a841bfe71cc0ce7b2f065abc","name":"actions:styfle/cancel-workflow-action","versionInfo":"89f242ee29e10c53a841bfe71cc0ce7b2f065abc","downloadLocation":"NOASSERTION","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:22:44Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/addlicense",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-addlicense"
+  ],
+  "documentNamespace": "https://github.com/google/addlicense/dependency_graph/sbom-a1d8e30b79da3ae3",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-addlicense",
+      "name": "com.github.google/addlicense",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/addlicense",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-bmatcuk-doublestar-v4-4.0.2",
+      "name": "go:github.com/bmatcuk/doublestar/v4",
+      "versionInfo": "4.0.2",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fbmatcuk%2Fdoublestar%2Fv4@4.0.2"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fbmatcuk%2Fdoublestar%2Fv4@4.0.2"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-sync-0.0.0-20190911185100-cd5d95a43a6e",
+      "name": "go:golang.org/x/sync",
+      "versionInfo": "0.0.0-20190911185100-cd5d95a43a6e",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fsync@0.0.0-20190911185100-cd5d95a43a6e"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fsync@0.0.0-20190911185100-cd5d95a43a6e"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-checkout-3",
+      "name": "actions:actions/checkout",
+      "versionInfo": "3",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@3"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcheckout@3"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-golangci-golangci-lint-action-3",
+      "name": "actions:golangci/golangci-lint-action",
+      "versionInfo": "3",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/golangci%2Fgolangci-lint-action@3"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/golangci%2Fgolangci-lint-action@3"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-setup-go-3",
+      "name": "actions:actions/setup-go",
+      "versionInfo": "3",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fsetup-go@3"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fsetup-go@3"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-docker-login-action-f054a8b539a109f9f41c372932f1ae047eff08c9",
+      "name": "actions:docker/login-action",
+      "versionInfo": "f054a8b539a109f9f41c372932f1ae047eff08c9",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/docker%2Flogin-action@f054a8b539a109f9f41c372932f1ae047eff08c9"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/docker%2Flogin-action@f054a8b539a109f9f41c372932f1ae047eff08c9"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-docker-build-push-action-1bc1040caef9e604eb543693ba89b5bf4fc80935",
+      "name": "actions:docker/build-push-action",
+      "versionInfo": "1bc1040caef9e604eb543693ba89b5bf4fc80935",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/docker%2Fbuild-push-action@1bc1040caef9e604eb543693ba89b5bf4fc80935"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/docker%2Fbuild-push-action@1bc1040caef9e604eb543693ba89b5bf4fc80935"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-goreleaser-goreleaser-action-5a54d7e660bda43b405e8463261b3d25631ffe86",
+      "name": "actions:goreleaser/goreleaser-action",
+      "versionInfo": "5a54d7e660bda43b405e8463261b3d25631ffe86",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/goreleaser%2Fgoreleaser-action@5a54d7e660bda43b405e8463261b3d25631ffe86"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/goreleaser%2Fgoreleaser-action@5a54d7e660bda43b405e8463261b3d25631ffe86"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-docker-metadata-action-8b842e721d38d18bea23b57f4c040e53331f4ca2",
+      "name": "actions:docker/metadata-action",
+      "versionInfo": "8b842e721d38d18bea23b57f4c040e53331f4ca2",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/docker%2Fmetadata-action@8b842e721d38d18bea23b57f4c040e53331f4ca2"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/docker%2Fmetadata-action@8b842e721d38d18bea23b57f4c040e53331f4ca2"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-actions-cache-3",
+      "name": "actions:actions/cache",
+      "versionInfo": "3",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcache@3"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/actions%2Fcache@3"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-codecov-codecov-action-3",
+      "name": "actions:codecov/codecov-action",
+      "versionInfo": "3",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/codecov%2Fcodecov-action@3"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/codecov%2Fcodecov-action@3"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-actions-styfle-cancel-workflow-action-89f242ee29e10c53a841bfe71cc0ce7b2f065abc",
+      "name": "actions:styfle/cancel-workflow-action",
+      "versionInfo": "89f242ee29e10c53a841bfe71cc0ce7b2f065abc",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/styfle%2Fcancel-workflow-action@89f242ee29e10c53a841bfe71cc0ce7b2f065abc"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:generic/github/styfle%2Fcancel-workflow-action@89f242ee29e10c53a841bfe71cc0ce7b2f065abc"
+        }
+      ],
+      "filesAnalyzed": false
+    }
+  ]
+}

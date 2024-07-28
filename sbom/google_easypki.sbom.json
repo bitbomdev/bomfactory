@@ -1,1 +1,26 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:50:59Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/easypki","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-easypki"],"documentNamespace":"https://github.com/google/easypki/dependency_graph/sbom-d1ce6a25acd9c73a","packages":[{"SPDXID":"SPDXRef-com.github.google-easypki","name":"com.github.google/easypki","versionInfo":"","downloadLocation":"git+https://github.com/google/easypki","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:29:13Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/easypki",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-easypki"
+  ],
+  "documentNamespace": "https://github.com/google/easypki/dependency_graph/sbom-1784502107cdacbc",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-easypki",
+      "name": "com.github.google/easypki",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/easypki",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    }
+  ]
+}

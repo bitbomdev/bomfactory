@@ -1,1 +1,46 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:48:20Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/gapid","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-gapid"],"documentNamespace":"https://github.com/google/gapid/dependency_graph/sbom-ad211d6a89fac8d9","packages":[{"SPDXID":"SPDXRef-com.github.google-gapid","name":"com.github.google/gapid","versionInfo":"","downloadLocation":"git+https://github.com/google/gapid","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"},{"SPDXID":"SPDXRef-npm-vscode-languageclient","name":"npm:vscode-languageclient","versionInfo":"^ 2.3.0","downloadLocation":"NOASSERTION","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:26:22Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/gapid",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-gapid"
+  ],
+  "documentNamespace": "https://github.com/google/gapid/dependency_graph/sbom-d9f7ef83e9ce96bb",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-gapid",
+      "name": "com.github.google/gapid",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/gapid",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-npm-vscode-languageclient",
+      "name": "npm:vscode-languageclient",
+      "versionInfo": "^ 2.3.0",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/vscode-languageclient@%5E%202.3.0"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/vscode-languageclient@%5E%202.3.0"
+        }
+      ],
+      "filesAnalyzed": false
+    }
+  ]
+}

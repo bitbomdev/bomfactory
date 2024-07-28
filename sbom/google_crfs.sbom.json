@@ -1,1 +1,106 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:50:04Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/crfs","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-crfs"],"documentNamespace":"https://github.com/google/crfs/dependency_graph/sbom-f94487edfbb0ab54","packages":[{"SPDXID":"SPDXRef-com.github.google-crfs","name":"com.github.google/crfs","versionInfo":"","downloadLocation":"git+https://github.com/google/crfs","filesAnalyzed":false,"licenseDeclared":"BSD-3-Clause"},{"SPDXID":"SPDXRef-go-bazil.org-fuse-0.0.0-20180421153158-65cc252bf669","name":"go:bazil.org/fuse","versionInfo":"0.0.0-20180421153158-65cc252bf669","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-cloud.google.com-go-0.37.2","name":"go:cloud.google.com/go","versionInfo":"0.37.2","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-golang.org-x-sys-0.0.0-20190507160741-ecd444e8653b","name":"go:golang.org/x/sys","versionInfo":"0.0.0-20190507160741-ecd444e8653b","downloadLocation":"NOASSERTION","filesAnalyzed":false},{"SPDXID":"SPDXRef-go-github.com-google-go-containerregistry-0.0.0-20191010200024-a3d713f9b7f8","name":"go:github.com/google/go-containerregistry","versionInfo":"0.0.0-20191010200024-a3d713f9b7f8","downloadLocation":"NOASSERTION","filesAnalyzed":false}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:28:16Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/crfs",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-crfs"
+  ],
+  "documentNamespace": "https://github.com/google/crfs/dependency_graph/sbom-fbde739238716561",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-crfs",
+      "name": "com.github.google/crfs",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/crfs",
+      "licenseDeclared": "BSD-3-Clause",
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-bazil.org-fuse-0.0.0-20180421153158-65cc252bf669",
+      "name": "go:bazil.org/fuse",
+      "versionInfo": "0.0.0-20180421153158-65cc252bf669",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/bazil.org%2Ffuse@0.0.0-20180421153158-65cc252bf669"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/bazil.org%2Ffuse@0.0.0-20180421153158-65cc252bf669"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-cloud.google.com-go-0.37.2",
+      "name": "go:cloud.google.com/go",
+      "versionInfo": "0.37.2",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/cloud.google.com%2Fgo@0.37.2"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/cloud.google.com%2Fgo@0.37.2"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-golang.org-x-sys-0.0.0-20190507160741-ecd444e8653b",
+      "name": "go:golang.org/x/sys",
+      "versionInfo": "0.0.0-20190507160741-ecd444e8653b",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fsys@0.0.0-20190507160741-ecd444e8653b"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org%2Fx%2Fsys@0.0.0-20190507160741-ecd444e8653b"
+        }
+      ],
+      "filesAnalyzed": false
+    },
+    {
+      "SPDXID": "SPDXRef-go-github.com-google-go-containerregistry-0.0.0-20191010200024-a3d713f9b7f8",
+      "name": "go:github.com/google/go-containerregistry",
+      "versionInfo": "0.0.0-20191010200024-a3d713f9b7f8",
+      "downloadLocation": "NOASSERTION",
+      "licenseDeclared": "",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fgo-containerregistry@0.0.0-20191010200024-a3d713f9b7f8"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com%2Fgoogle%2Fgo-containerregistry@0.0.0-20191010200024-a3d713f9b7f8"
+        }
+      ],
+      "filesAnalyzed": false
+    }
+  ]
+}

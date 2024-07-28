@@ -1,1 +1,26 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:50:27Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/go-microservice-helpers","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-go-microservice-helpers"],"documentNamespace":"https://github.com/google/go-microservice-helpers/dependency_graph/sbom-add792fcf65848a2","packages":[{"SPDXID":"SPDXRef-com.github.google-go-microservice-helpers","name":"com.github.google/go-microservice-helpers","versionInfo":"","downloadLocation":"git+https://github.com/google/go-microservice-helpers","filesAnalyzed":false,"licenseDeclared":"Apache-2.0"}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:28:40Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/go-microservice-helpers",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-go-microservice-helpers"
+  ],
+  "documentNamespace": "https://github.com/google/go-microservice-helpers/dependency_graph/sbom-cf46dfe222f41f75",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-go-microservice-helpers",
+      "name": "com.github.google/go-microservice-helpers",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/go-microservice-helpers",
+      "licenseDeclared": "Apache-2.0",
+      "filesAnalyzed": false
+    }
+  ]
+}

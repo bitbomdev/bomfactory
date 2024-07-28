@@ -1,1 +1,26 @@
-{"sbom":{"SPDXID":"SPDXRef-DOCUMENT","spdxVersion":"SPDX-2.3","creationInfo":{"created":"2024-07-26T21:46:49Z","creators":["Tool: GitHub.com-Dependency-Graph"]},"name":"com.github.google/gxui","dataLicense":"CC0-1.0","documentDescribes":["SPDXRef-com.github.google-gxui"],"documentNamespace":"https://github.com/google/gxui/dependency_graph/sbom-2c50d42326478aad","packages":[{"SPDXID":"SPDXRef-com.github.google-gxui","name":"com.github.google/gxui","versionInfo":"","downloadLocation":"git+https://github.com/google/gxui","filesAnalyzed":false,"licenseDeclared":"BSD-3-Clause"}]}}
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-07-28T22:24:35Z",
+    "creators": [
+      "Tool: GitHub.com-Dependency-Graph"
+    ]
+  },
+  "name": "com.github.google/gxui",
+  "dataLicense": "CC0-1.0",
+  "documentDescribes": [
+    "SPDXRef-com.github.google-gxui"
+  ],
+  "documentNamespace": "https://github.com/google/gxui/dependency_graph/sbom-762409d49f7dfe27",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-com.github.google-gxui",
+      "name": "com.github.google/gxui",
+      "versionInfo": "",
+      "downloadLocation": "git+https://github.com/google/gxui",
+      "licenseDeclared": "BSD-3-Clause",
+      "filesAnalyzed": false
+    }
+  ]
+}
