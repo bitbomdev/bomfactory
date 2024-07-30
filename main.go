@@ -71,6 +71,12 @@ func main() {
 						Usage:    "Filter criteria in the format 'field:operator:value' (can be used multiple times)",
 						Required: true,
 					},
+					&cli.IntFlag{
+						Name:    "max-results",
+						Aliases: []string{"m"},
+						Usage:   "Maximum number of results to return",
+						Value:   100,
+					},
 				},
 				Action: querySQLiteData,
 			},
@@ -104,6 +110,12 @@ func main() {
 						Value:    defaultSBOMDir,
 						Usage:    "Directory to save the SBOM files",
 						Required: false,
+					},
+					&cli.IntFlag{
+						Name:    "max-results",
+						Aliases: []string{"m"},
+						Usage:   "Maximum number of results to return",
+						Value:   100,
 					},
 				},
 				Action: downloadSBOMs,
@@ -245,7 +257,7 @@ func querySQLiteData(c *cli.Context) error {
 		filterCriteria = append(filterCriteria, criterion)
 	}
 
-	filteredData, err := csv.FilterSQLiteData(db, filterCriteria)
+	filteredData, err := csv.FilterSQLiteData(db, filterCriteria, c.Int("max-results")) // Added the third argument
 	if err != nil {
 		return fmt.Errorf("failed to filter SQLite data: %w", err)
 	}
@@ -282,7 +294,7 @@ func downloadSBOMs(c *cli.Context) error {
 		filterCriteria = append(filterCriteria, criterion)
 	}
 
-	filteredData, err := csv.FilterSQLiteData(db, filterCriteria)
+	filteredData, err := csv.FilterSQLiteData(db, filterCriteria, c.Int("max-results"))
 	if err != nil {
 		return fmt.Errorf("failed to filter SQLite data: %w", err)
 	}
@@ -361,17 +373,25 @@ func convertToPURL(c *cli.Context) error {
 			return fmt.Errorf("failed to read directory: %w", err)
 		}
 
+		var failedFiles []string
 		for _, file := range files {
 			if !file.IsDir() && strings.HasSuffix(file.Name(), ".json") {
 				filePath := fmt.Sprintf("%s/%s", dirPath, file.Name())
 				err := sbom.UpdateSPDXWithPURLs(filePath)
 				if err != nil {
-					fmt.Printf("Failed to convert SPDX to PURLs for file %s: %v\n", filePath, err)
-					continue
+					failedFiles = append(failedFiles, fmt.Sprintf("%s: %v", filePath, err))
 				}
-				fmt.Printf("Successfully converted SPDX file to include PURLs: %s\n", filePath)
 			}
 		}
+
+		if len(failedFiles) > 0 {
+			for _, failure := range failedFiles {
+				fmt.Println(failure)
+			}
+			return fmt.Errorf("conversion failed for %d file(s)", len(failedFiles))
+		}
+
+		fmt.Printf("Successfully converted all SPDX files in directory: %s\n", dirPath)
 		return nil
 	}
 

@@ -220,7 +220,7 @@ func HandleNullValue(value interface{}) interface{} {
 }
 
 // FilterSQLiteData filters data in SQLite based on multiple criteria and returns a slice of RepoData structs
-func FilterSQLiteData(db *sql.DB, criteria []FilterCriteria) ([]RepoData, error) {
+func FilterSQLiteData(db *sql.DB, criteria []FilterCriteria, maxResults int) ([]RepoData, error) {
 	var filteredRecords []RepoData
 
 	// Build query
@@ -249,6 +249,10 @@ func FilterSQLiteData(db *sql.DB, criteria []FilterCriteria) ([]RepoData, error)
 	}
 
 	for rows.Next() {
+		if maxResults > 0 && len(filteredRecords) >= maxResults {
+			break
+		}
+
 		columnPointers := make([]interface{}, len(columns))
 		columnValues := make([]interface{}, len(columns))
 		for i := range columnValues {
