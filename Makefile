@@ -6,7 +6,7 @@ all: build
 
 # Build the project
 build:
-	go build -o bin/bom-factory main.go
+	go build -o bin/bomfactory main.go
 
 # Lint the code
 lint:
