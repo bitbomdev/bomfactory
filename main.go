@@ -3,7 +3,9 @@ package main
 import (
 	"database/sql"
 	"fmt"
+	"io"
 	"log"
+	"net/http"
 	"net/url"
 	"os"
 	"strings"
@@ -17,6 +19,7 @@ import (
 
 const defaultDBPath = "data.db"
 const defaultSBOMDir = "sbom"
+const defaultCSVURL = "https://www.googleapis.com/download/storage/v1/b/ossf-criticality-score/o/2024.07.05%2F143335%2Fall.csv?generation=1721362287412491&alt=media"
 
 func main() {
 	app := &cli.App{
@@ -38,9 +41,9 @@ func main() {
 					&cli.StringFlag{
 						Name:     "csv",
 						Aliases:  []string{"c"},
-						Value:    "data.csv",
+						Value:    "",
 						Usage:    "Path to the CSV file",
-						Required: true,
+						Required: false,
 					},
 					&cli.IntFlag{
 						Name:  "start",
@@ -52,6 +55,28 @@ func main() {
 					},
 				},
 				Action: loadCSVToSQLite,
+			},
+			{
+				Name:    "download-csv",
+				Aliases: []string{"dc"},
+				Usage:   "Download the Criticality Score CSV file",
+				Flags: []cli.Flag{
+					&cli.StringFlag{
+						Name:     "url",
+						Aliases:  []string{"u"},
+						Value:    defaultCSVURL,
+						Usage:    "URL to download the CSV file from",
+						Required: false,
+					},
+					&cli.StringFlag{
+						Name:     "output",
+						Aliases:  []string{"o"},
+						Value:    "data.csv",
+						Usage:    "Output file path",
+						Required: false,
+					},
+				},
+				Action: downloadCSV,
 			},
 			{
 				Name:    "query",
@@ -173,6 +198,10 @@ func loadCSVToSQLite(c *cli.Context) error {
 	dbPath := c.String("db")
 	csvFilePath := c.String("csv")
 
+	if csvFilePath == "" {
+		return fmt.Errorf("CSV file path must be provided")
+	}
+
 	if _, err := os.Stat(csvFilePath); os.IsNotExist(err) {
 		return fmt.Errorf("CSV file does not exist: %s", csvFilePath)
 	}
@@ -238,6 +267,36 @@ func loadCSVToSQLite(c *cli.Context) error {
 	return nil
 }
 
+func downloadCSV(c *cli.Context) error {
+	url := c.String("url")
+	output := c.String("output")
+
+	err := downloadFile(url, output)
+	if err != nil {
+		return fmt.Errorf("failed to download CSV file: %w", err)
+	}
+
+	fmt.Printf("CSV file downloaded successfully to %s\n", output)
+	return nil
+}
+
+func downloadFile(url, filepath string) error {
+	resp, err := http.Get(url)
+	if err != nil {
+		return err
+	}
+	defer resp.Body.Close()
+
+	out, err := os.Create(filepath)
+	if err != nil {
+		return err
+	}
+	defer out.Close()
+
+	_, err = io.Copy(out, resp.Body)
+	return err
+}
+
 func querySQLiteData(c *cli.Context) error {
 	dbPath := c.String("db")
 	filterArgs := c.StringSlice("filter")
@@ -257,7 +316,7 @@ func querySQLiteData(c *cli.Context) error {
 		filterCriteria = append(filterCriteria, criterion)
 	}
 
-	filteredData, err := csv.FilterSQLiteData(db, filterCriteria, c.Int("max-results")) // Added the third argument
+	filteredData, err := csv.FilterSQLiteData(db, filterCriteria, c.Int("max-results"))
 	if err != nil {
 		return fmt.Errorf("failed to filter SQLite data: %w", err)
 	}
@@ -311,11 +370,10 @@ func downloadSBOMs(c *cli.Context) error {
 
 	for i := 0; i < len(filteredData); i++ {
 		repo := &filteredData[i]
-		sbomContent, err := csv.DownloadSBOMFromGitHub(*repo, token) // Dereference the pointer
+		sbomContent, err := csv.DownloadSBOMFromGitHub(*repo, token)
 		if err != nil {
 			fmt.Printf("Failed to download SBOM for %s: %v\n", repo.RepoURL, err)
 			continue
-			// Dereference the pointer when passing it to the function
 		}
 
 		parsedURL, err := url.Parse(repo.RepoURL)
