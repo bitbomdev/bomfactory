@@ -1,0 +1,29 @@
+package:
+  name: bomfactory
+  version: 0.1.0
+  description: A tool to generate SBOMs for ossf criticality projects
+  target-architecture:
+    - x86_64
+    - amd64
+  copyright:
+    - license: Apache-2.0
+  dependencies:
+    runtime:
+      - syft
+
+environment:
+  contents:
+    keyring:
+      - https://packages.wolfi.dev/os/wolfi-signing.rsa.pub
+    repositories:
+      - https://packages.wolfi.dev/os
+    packages:
+      - ca-certificates-bundle
+      - busybox
+      - go
+
+pipeline:
+  - name: Build Go application
+    runs: |
+      set -x
+      CGO_ENABLED=0 go build -o "${{targets.destdir}}/usr/sbin/bomfactory" main.go

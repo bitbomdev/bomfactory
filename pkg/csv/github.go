@@ -8,6 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/go-git/go-git/v5"
 	"github.com/google/go-github/v63/github"
 	"golang.org/x/oauth2"
 )
@@ -82,6 +83,22 @@ func SaveSBOMToFile(sbomContent, dir, repoName string) error {
 	_, err = file.WriteString(sbomContent)
 	if err != nil {
 		return fmt.Errorf("failed to write SBOM content to file: %w", err)
+	}
+
+	return nil
+}
+
+// CloneRepo clones a Git repository using HTTP to a specified directory without history
+func CloneRepo(repoURL, dir string) error {
+
+	// Clone the repository with depth 1 (shallow clone)
+	_, err := git.PlainClone(dir, false, &git.CloneOptions{
+		URL:      repoURL,
+		Progress: os.Stdout,
+		Depth:    1, // Shallow clone
+	})
+	if err != nil {
+		return fmt.Errorf("failed to clone repository: %w", err)
 	}
 
 	return nil

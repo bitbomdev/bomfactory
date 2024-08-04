@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"net/url"
 	"os"
+	"path/filepath"
 	"strings"
 	"time"
 
@@ -121,12 +122,6 @@ func main() {
 						Name:     "filter",
 						Aliases:  []string{"f"},
 						Usage:    "Filter criteria in the format 'field:operator:value' (can be used multiple times)",
-						Required: true,
-					},
-					&cli.StringFlag{
-						Name:     "token",
-						Aliases:  []string{"t"},
-						Usage:    "GitHub token for authentication",
 						Required: true,
 					},
 					&cli.StringFlag{
@@ -334,7 +329,6 @@ func querySQLiteData(c *cli.Context) error {
 func downloadSBOMs(c *cli.Context) error {
 	dbPath := c.String("db")
 	filterArgs := c.StringSlice("filter")
-	token := c.String("token")
 	dir := c.String("dir")
 
 	// Open SQLite database
@@ -370,9 +364,19 @@ func downloadSBOMs(c *cli.Context) error {
 
 	for i := 0; i < len(filteredData); i++ {
 		repo := &filteredData[i]
-		sbomContent, err := csv.DownloadSBOMFromGitHub(*repo, token)
+
+		// Create a temporary directory for cloning
+		tempDir, err := os.MkdirTemp("", "repo-clone-")
 		if err != nil {
-			fmt.Printf("Failed to download SBOM for %s: %v\n", repo.RepoURL, err)
+			fmt.Printf("Failed to create temporary directory for %s: %v\n", repo.RepoURL, err)
+			continue
+		}
+		defer os.RemoveAll(tempDir) // Clean up after processing
+
+		// Clone the repository
+		err = csv.CloneRepo(repo.RepoURL, tempDir)
+		if err != nil {
+			fmt.Printf("Failed to clone repository %s: %v\n", repo.RepoURL, err)
 			continue
 		}
 
@@ -392,14 +396,17 @@ func downloadSBOMs(c *cli.Context) error {
 		repoName := pathSegments[2]
 		safeOrgName := url.PathEscape(orgName)
 		safeRepoName := url.PathEscape(repoName)
-		fileName := fmt.Sprintf("%s_%s", safeOrgName, safeRepoName)
+		fileName := fmt.Sprintf("%s_%s.sbom.json", safeOrgName, safeRepoName)
+		outputFile := filepath.Join(dir, fileName)
 
-		if err := csv.SaveSBOMToFile(sbomContent, dir, fileName); err != nil {
-			fmt.Printf("Failed to save SBOM for %s: %v\n", repo.RepoURL, err)
+		// Generate SBOM using Syft
+		err = sbom.GenerateSBOMWithSyft(tempDir, outputFile)
+		if err != nil {
+			fmt.Printf("Failed to generate SBOM for %s: %v\n", repo.RepoURL, err)
 			continue
 		}
 
-		fmt.Printf("SBOM for %s saved successfully\n", repo.RepoURL)
+		fmt.Printf("SBOM for %s generated and saved successfully\n", repo.RepoURL)
 
 		// Add a delay of 3 seconds between downloads
 		time.Sleep(3 * time.Second)
