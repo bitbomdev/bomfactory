@@ -90,12 +90,13 @@ func SaveSBOMToFile(sbomContent, dir, repoName string) error {
 
 // CloneRepo clones a Git repository using HTTP to a specified directory without history
 func CloneRepo(repoURL, dir string) error {
+	// Convert HTTPS URL to HTTP
+	httpURL := strings.Replace(repoURL, "https://", "http://", 1)
 
 	// Clone the repository with depth 1 (shallow clone)
 	_, err := git.PlainClone(dir, false, &git.CloneOptions{
-		URL:      repoURL,
-		Progress: os.Stdout,
-		Depth:    1, // Shallow clone
+		URL:   httpURL,
+		Depth: 1, // Shallow clone
 	})
 	if err != nil {
 		return fmt.Errorf("failed to clone repository: %w", err)
