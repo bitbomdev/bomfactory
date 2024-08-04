@@ -2,3 +2,9 @@ bomfactory
 data.db
 data.csv
 bin/
+packages-bomfactory
+melange.rsa
+melange.rsa.pub
+sbom.json
+sbom-*.json
+output-bomfactory-*.tar
