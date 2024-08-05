@@ -26,4 +26,4 @@ pipeline:
   - name: Build Go application
     runs: |
       set -x
-      CGO_ENABLED=0 go build -o "${{targets.destdir}}/usr/sbin/bomfactory" main.go
+      CGO_ENABLED=1 go build -o "${{targets.destdir}}/usr/sbin/bomfactory" main.go
