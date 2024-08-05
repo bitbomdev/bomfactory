@@ -400,7 +400,7 @@ func downloadSBOMs(c *cli.Context) error {
 		outputFile := filepath.Join(dir, fileName)
 
 		// Generate SBOM using Syft
-		err = sbom.GenerateSBOMWithSyft(tempDir, outputFile)
+		err = sbom.GenerateSBOMWithSyft(tempDir, outputFile, repo.RepoURL)
 		if err != nil {
 			fmt.Printf("Failed to generate SBOM for %s: %v\n", repo.RepoURL, err)
 			continue

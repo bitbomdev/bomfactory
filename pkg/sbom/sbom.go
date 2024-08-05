@@ -18,7 +18,7 @@ func ValidateSBOM(sbom string) error {
 }
 
 // GenerateSBOMWithSyft generates an SBOM using the syft binary.
-func GenerateSBOMWithSyft(directory, outputFile string) error {
+func GenerateSBOMWithSyft(directory, outputFile, repo string) error {
 	// Check if syft is installed
 	_, err := exec.LookPath("syft")
 	if err != nil {
@@ -26,7 +26,7 @@ func GenerateSBOMWithSyft(directory, outputFile string) error {
 	}
 	cmd := exec.Command("syft", "scan", fmt.Sprintf("dir:%s", directory), //nolint:gosec
 		"-o", "cyclonedx-json", "--file", outputFile,
-		"--select-catalogers", "+github-actions-usage-cataloger")
+		"--select-catalogers", "+github-actions-usage-cataloger", "--source-name", repo)
 
 	output, err := cmd.CombinedOutput()
 	if err != nil {
