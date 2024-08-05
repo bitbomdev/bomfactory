@@ -398,9 +398,11 @@ func downloadSBOMs(c *cli.Context) error {
 		safeRepoName := url.PathEscape(repoName)
 		fileName := fmt.Sprintf("%s_%s.sbom.json", safeOrgName, safeRepoName)
 		outputFile := filepath.Join(dir, fileName)
-
+		// Remove the scheme (http:// or https://) from the RepoURL
+		repoURLWithoutScheme := strings.TrimPrefix(repo.RepoURL, "http://")
+		repoURLWithoutScheme = strings.TrimPrefix(repoURLWithoutScheme, "https://")
 		// Generate SBOM using Syft
-		err = sbom.GenerateSBOMWithSyft(tempDir, outputFile, repo.RepoURL)
+		err = sbom.GenerateSBOMWithSyft(tempDir, outputFile, repoURLWithoutScheme)
 		if err != nil {
 			fmt.Printf("Failed to generate SBOM for %s: %v\n", repo.RepoURL, err)
 			continue
