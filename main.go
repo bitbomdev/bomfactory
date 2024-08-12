@@ -103,6 +103,12 @@ func main() {
 						Usage:   "Maximum number of results to return",
 						Value:   100,
 					},
+					&cli.IntFlag{
+						Name:    "skip",
+						Aliases: []string{"s"},
+						Usage:   "Number of records to skip",
+						Value:   0,
+					},
 				},
 				Action: querySQLiteData,
 			},
@@ -136,6 +142,12 @@ func main() {
 						Aliases: []string{"m"},
 						Usage:   "Maximum number of results to return",
 						Value:   100,
+					},
+					&cli.IntFlag{
+						Name:    "skip",
+						Aliases: []string{"s"},
+						Usage:   "Number of records to skip",
+						Value:   0,
 					},
 				},
 				Action: downloadSBOMs,
@@ -311,7 +323,13 @@ func querySQLiteData(c *cli.Context) error {
 		filterCriteria = append(filterCriteria, criterion)
 	}
 
-	filteredData, err := csv.FilterSQLiteData(db, filterCriteria, c.Int("max-results"))
+	options := csv.FilterOptions{
+		Criteria:    filterCriteria,
+		MaxResults:  c.Int("max-results"),
+		SkipRecords: c.Int("skip"),
+	}
+
+	filteredData, err := csv.FilterSQLiteData(db, options)
 	if err != nil {
 		return fmt.Errorf("failed to filter SQLite data: %w", err)
 	}
@@ -347,7 +365,13 @@ func downloadSBOMs(c *cli.Context) error {
 		filterCriteria = append(filterCriteria, criterion)
 	}
 
-	filteredData, err := csv.FilterSQLiteData(db, filterCriteria, c.Int("max-results"))
+	options := csv.FilterOptions{
+		Criteria:    filterCriteria,
+		MaxResults:  c.Int("max-results"),
+		SkipRecords: c.Int("skip"),
+	}
+
+	filteredData, err := csv.FilterSQLiteData(db, options)
 	if err != nil {
 		return fmt.Errorf("failed to filter SQLite data: %w", err)
 	}
@@ -402,7 +426,7 @@ func downloadSBOMs(c *cli.Context) error {
 		repoURLWithoutScheme := strings.TrimPrefix(repo.RepoURL, "http://")
 		repoURLWithoutScheme = strings.TrimPrefix(repoURLWithoutScheme, "https://")
 		// Generate SBOM using Syft
-		err = sbom.GenerateSBOMWithSyft(tempDir, outputFile, repoURLWithoutScheme)
+		err = sbom.GenerateSBOMWithCycloneDX(tempDir, outputFile, repoURLWithoutScheme)
 		if err != nil {
 			fmt.Printf("Failed to generate SBOM for %s: %v\n", repo.RepoURL, err)
 			continue

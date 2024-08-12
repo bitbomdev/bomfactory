@@ -17,20 +17,18 @@ func ValidateSBOM(sbom string) error {
 	return nil
 }
 
-// GenerateSBOMWithSyft generates an SBOM using the syft binary.
-func GenerateSBOMWithSyft(directory, outputFile, repo string) error {
-	// Check if syft is installed
-	_, err := exec.LookPath("syft")
+// GenerateSBOMWithCycloneDX generates an SBOM using the cdxgen binary.
+func GenerateSBOMWithCycloneDX(directory, outputFile, repo string) error {
+	// Check if cdxgen is installed
+	_, err := exec.LookPath("cdxgen")
 	if err != nil {
-		return fmt.Errorf("syft is not installed or not in PATH: %w", err)
+		return fmt.Errorf("cdxgen is not installed or not in PATH: %w", err)
 	}
-	cmd := exec.Command("syft", "scan", fmt.Sprintf("dir:%s", directory), //nolint:gosec
-		"-o", "cyclonedx-json", "--file", outputFile,
-		"--select-catalogers", "+github-actions-usage-cataloger", "--source-name", repo)
+	cmd := exec.Command("cdxgen", "-r", "-o", outputFile, "--install-deps", "false", "--spec-version", "1.5", directory)
 
 	output, err := cmd.CombinedOutput()
 	if err != nil {
-		return fmt.Errorf("error generating SBOM with syft: %w\nOutput: %s", err, output)
+		return fmt.Errorf("error generating SBOM with cdxgen: %w\nOutput: %s", err, output)
 	}
 
 	return nil

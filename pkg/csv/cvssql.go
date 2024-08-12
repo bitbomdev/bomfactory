@@ -219,14 +219,21 @@ func HandleNullValue(value interface{}) interface{} {
 	return value
 }
 
+// FilterOptions defines options for filtering rows
+type FilterOptions struct {
+	Criteria    []FilterCriteria
+	MaxResults  int
+	SkipRecords int // Number of records to skip
+}
+
 // FilterSQLiteData filters data in SQLite based on multiple criteria and returns a slice of RepoData structs
-func FilterSQLiteData(db *sql.DB, criteria []FilterCriteria, maxResults int) ([]RepoData, error) {
+func FilterSQLiteData(db *sql.DB, options FilterOptions) ([]RepoData, error) {
 	var filteredRecords []RepoData
 
 	// Build query
 	query := "SELECT * FROM repos WHERE "
 	args := []interface{}{}
-	for i, criterion := range criteria {
+	for i, criterion := range options.Criteria {
 		if i > 0 {
 			query += " AND "
 		}
@@ -237,6 +244,14 @@ func FilterSQLiteData(db *sql.DB, criteria []FilterCriteria, maxResults int) ([]
 	// Add ORDER BY clause for Criticality Score (default_score) in descending order
 	query += " ORDER BY default_score DESC"
 
+	// Add LIMIT and OFFSET clauses
+	if options.MaxResults > 0 {
+		query += fmt.Sprintf(" LIMIT %d", options.MaxResults)
+	}
+	if options.SkipRecords > 0 {
+		query += fmt.Sprintf(" OFFSET %d", options.SkipRecords)
+	}
+	fmt.Println(query)
 	rows, err := db.Query(query, args...)
 	if err != nil {
 		return nil, fmt.Errorf("failed to query sqlite: %w", err)
@@ -249,10 +264,6 @@ func FilterSQLiteData(db *sql.DB, criteria []FilterCriteria, maxResults int) ([]
 	}
 
 	for rows.Next() {
-		if maxResults > 0 && len(filteredRecords) >= maxResults {
-			break
-		}
-
 		columnPointers := make([]interface{}, len(columns))
 		columnValues := make([]interface{}, len(columns))
 		for i := range columnValues {
