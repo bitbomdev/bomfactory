@@ -1,8 +1,10 @@
 package sbom
 
 import (
+	"context"
 	"fmt"
 	"os/exec"
+	"time"
 
 	proto "github.com/protobom/protobom/pkg/reader"
 )
@@ -24,9 +26,17 @@ func GenerateSBOMWithCycloneDX(directory, outputFile, repo string) error {
 	if err != nil {
 		return fmt.Errorf("cdxgen is not installed or not in PATH: %w", err)
 	}
-	cmd := exec.Command("cdxgen", "-r", "-o", outputFile, "--install-deps", "false", "--spec-version", "1.5", directory)
 
+	// Create a context with a 5-minute timeout
+	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Minute)
+	defer cancel()
+
+	cmd := exec.CommandContext(ctx, "cdxgen", "-r", "-o", outputFile, "--no-install-deps", "--install-deps", "false", "--spec-version", "1.5", directory)
+	fmt.Println("Executing command: for the repo", repo, cmd.String())
 	output, err := cmd.CombinedOutput()
+	if ctx.Err() == context.DeadlineExceeded {
+		return fmt.Errorf("command timed out")
+	}
 	if err != nil {
 		return fmt.Errorf("error generating SBOM with cdxgen: %w\nOutput: %s", err, output)
 	}
