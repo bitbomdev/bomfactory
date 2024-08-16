@@ -24,7 +24,7 @@ const defaultCSVURL = "https://www.googleapis.com/download/storage/v1/b/ossf-cri
 
 func main() {
 	app := &cli.App{
-		Name:  "criticalprojects",
+		Name:  "bomfactory",
 		Usage: "Load CSV data into SQLite and query it",
 		Commands: []*cli.Command{
 			{

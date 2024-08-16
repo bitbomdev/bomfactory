@@ -31,7 +31,7 @@ func GenerateSBOMWithCycloneDX(directory, outputFile, repo string) error {
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Minute)
 	defer cancel()
 
-	cmd := exec.CommandContext(ctx, "cdxgen", "-r", "-o", outputFile, "--no-install-deps", "--install-deps", "false", "--spec-version", "1.5", directory)
+	cmd := exec.CommandContext(ctx, "cdxgen", "-r", "-o", outputFile, "--no-install-deps", "--project-name", repo, "--install-deps", "false", "--spec-version", "1.5", directory)
 	fmt.Println("Executing command: for the repo", repo, cmd.String())
 	output, err := cmd.CombinedOutput()
 	if ctx.Err() == context.DeadlineExceeded {
