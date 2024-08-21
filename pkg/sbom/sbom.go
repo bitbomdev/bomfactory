@@ -30,7 +30,7 @@ func GenerateSBOMWithCycloneDX(directory, outputFile, repo string) error {
 	// Generate the output file name by replacing slashes with underscores and appending .json extension
 	escapedRepo := strings.ReplaceAll(repo, "/", "_")
 	outputFileName := fmt.Sprintf("%s.json", escapedRepo)
-	// Create a context with a 5-minute timeout
+	// Create a context with a 2-minute timeout
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Minute)
 	defer cancel()
 
