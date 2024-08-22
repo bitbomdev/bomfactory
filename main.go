@@ -10,6 +10,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"sync"
 
 	"github.com/bit-bom/bom-factory/pkg/csv"
 	"github.com/bit-bom/bom-factory/pkg/sbom"
@@ -154,6 +155,12 @@ func main() {
 						Aliases: []string{"s"},
 						Usage:   "Number of records to skip",
 						Value:   0,
+					},
+					&cli.IntFlag{
+						Name:    "concurrent-downloads",
+						Aliases: []string{"cd"},
+						Usage:   "Maximum number of concurrent downloads",
+						Value:   2,
 					},
 				},
 				Action: downloadSBOMs,
@@ -354,7 +361,8 @@ func downloadSBOMs(c *cli.Context) error {
 	dbPath := c.String("db")
 	filterArgs := c.StringSlice("filter")
 	dir := c.String("dir")
-	tempBaseDir := c.String("temp-dir") // Use the temp-dir flag
+	tempBaseDir := c.String("temp-dir")                     // Use the temp-dir flag
+	maxConcurrentDownloads := c.Int("concurrent-downloads") // Get the value from the flag
 
 	// Open SQLite database
 	db, err := sql.Open("sqlite3", dbPath)
@@ -393,61 +401,75 @@ func downloadSBOMs(c *cli.Context) error {
 		return fmt.Errorf("failed to create directory: %w", err)
 	}
 
-	for i := 0; i < len(filteredData); i++ {
-		repo := &filteredData[i]
+	// Create a channel to send download tasks to workers
+	tasks := make(chan *csv.RepoData, len(filteredData))
+	var wg sync.WaitGroup
 
-		// Create a temporary directory for cloning
-		tempDir, err := os.MkdirTemp(tempBaseDir, "repo-clone-")
-		if err != nil {
-			fmt.Printf("Failed to create temporary directory for %s: %v\n", repo.RepoURL, err)
-			continue
-		}
+	// Start worker goroutines
+	for i := 0; i < maxConcurrentDownloads; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			for repo := range tasks {
+				// Create a temporary directory for cloning
+				tempDir, err := os.MkdirTemp(tempBaseDir, "repo-clone-")
+				if err != nil {
+					fmt.Printf("Failed to create temporary directory for %s: %v\n", repo.RepoURL, err)
+					continue
+				}
 
-		// Clone the repository
-		err = csv.CloneRepo(repo.RepoURL, tempDir)
-		if err != nil {
-			fmt.Printf("Failed to clone repository %s: %v\n", repo.RepoURL, err)
-			os.RemoveAll(tempDir) // Clean up immediately
-			continue
-		}
+				// Clone the repository
+				err = csv.CloneRepo(repo.RepoURL, tempDir)
+				if err != nil {
+					os.RemoveAll(tempDir)
+					fmt.Printf("Failed to clone repository %s: %v\n", repo.RepoURL, err)
+					continue
+				}
 
-		parsedURL, err := url.Parse(repo.RepoURL)
-		if err != nil {
-			fmt.Printf("Failed to parse URL %s: %v\n", repo.RepoURL, err)
-			os.RemoveAll(tempDir) // Clean up immediately
-			continue
-		}
+				parsedURL, err := url.Parse(repo.RepoURL)
+				if err != nil {
+					os.RemoveAll(tempDir)
+					fmt.Printf("Failed to parse URL %s: %v\n", repo.RepoURL, err)
+					continue
+				}
 
-		pathSegments := strings.Split(parsedURL.Path, "/")
-		if len(pathSegments) < 3 {
-			fmt.Printf("Invalid repository URL format: %s\n", repo.RepoURL)
-			os.RemoveAll(tempDir) // Clean up immediately
-			continue
-		}
+				pathSegments := strings.Split(parsedURL.Path, "/")
+				if len(pathSegments) < 3 {
+					os.RemoveAll(tempDir)
+					fmt.Printf("Invalid repository URL format: %s\n", repo.RepoURL)
+					continue
+				}
 
-		orgName := pathSegments[1]
-		repoName := pathSegments[2]
-		safeOrgName := url.PathEscape(orgName)
-		safeRepoName := url.PathEscape(repoName)
-		fileName := fmt.Sprintf("%s_%s.sbom.json", safeOrgName, safeRepoName)
-		outputFile := filepath.Join(dir, fileName)
-		// Remove the scheme (http:// or https://) from the RepoURL
-		repoURLWithoutScheme := strings.TrimPrefix(repo.RepoURL, "http://")
-		repoURLWithoutScheme = strings.TrimPrefix(repoURLWithoutScheme, "https://")
-		// Generate SBOM using Syft
-		err = sbom.GenerateSBOMWithCycloneDX(tempDir, outputFile, repoURLWithoutScheme)
-		if err != nil {
-			fmt.Printf("Failed to generate SBOM for %s: %v\n", repo.RepoURL, err)
-			os.RemoveAll(tempDir) // Clean up immediately
-			continue
-		}
+				orgName := pathSegments[1]
+				repoName := pathSegments[2]
+				safeOrgName := url.PathEscape(orgName)
+				safeRepoName := url.PathEscape(repoName)
+				fileName := fmt.Sprintf("%s_%s.sbom.json", safeOrgName, safeRepoName)
+				outputFile := filepath.Join(dir, fileName)
+				// Remove the scheme (http:// or https://) from the RepoURL
+				repoURLWithoutScheme := strings.TrimPrefix(repo.RepoURL, "http://")
+				repoURLWithoutScheme = strings.TrimPrefix(repoURLWithoutScheme, "https://")
+				// Generate SBOM using Syft
+				err = sbom.GenerateSBOMWithCycloneDX(tempDir, outputFile, repoURLWithoutScheme)
+				if err != nil {
+					fmt.Printf("Failed to generate SBOM for %s: %v\n", repo.RepoURL, err)
+					os.RemoveAll(tempDir)
+					continue
+				}
 
-		fmt.Printf("SBOM for %s generated and saved successfully\n", repo.RepoURL)
-
-		// Clean up the temporary directory immediately after processing
-		os.RemoveAll(tempDir)
+				fmt.Printf("SBOM for %s generated and saved successfully\n", repo.RepoURL)
+				os.RemoveAll(tempDir)
+			}
+		}()
 	}
 
+	// Send download tasks to the workers
+	for i := 0; i < len(filteredData); i++ {
+		tasks <- &filteredData[i]
+	}
+	close(tasks) // Close the channel to signal workers that no more tasks are coming
+
+	wg.Wait() // Wait for all workers to complete
 	return nil
 }
 
