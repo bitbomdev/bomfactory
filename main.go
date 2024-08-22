@@ -137,6 +137,13 @@ func main() {
 						Usage:    "Directory to save the SBOM files",
 						Required: false,
 					},
+					&cli.StringFlag{
+						Name:     "temp-dir",
+						Aliases:  []string{"t"},
+						Value:    os.TempDir(), // Default to system temp directory
+						Usage:    "Directory to use for temporary files",
+						Required: false,
+					},
 					&cli.IntFlag{
 						Name:    "max-results",
 						Aliases: []string{"m"},
@@ -348,6 +355,7 @@ func downloadSBOMs(c *cli.Context) error {
 	dbPath := c.String("db")
 	filterArgs := c.StringSlice("filter")
 	dir := c.String("dir")
+	tempBaseDir := c.String("temp-dir") // Use the temp-dir flag
 
 	// Open SQLite database
 	db, err := sql.Open("sqlite3", dbPath)
@@ -390,29 +398,31 @@ func downloadSBOMs(c *cli.Context) error {
 		repo := &filteredData[i]
 
 		// Create a temporary directory for cloning
-		tempDir, err := os.MkdirTemp("", "repo-clone-")
+		tempDir, err := os.MkdirTemp(tempBaseDir, "repo-clone-")
 		if err != nil {
 			fmt.Printf("Failed to create temporary directory for %s: %v\n", repo.RepoURL, err)
 			continue
 		}
-		defer os.RemoveAll(tempDir) // Clean up after processing
 
 		// Clone the repository
 		err = csv.CloneRepo(repo.RepoURL, tempDir)
 		if err != nil {
 			fmt.Printf("Failed to clone repository %s: %v\n", repo.RepoURL, err)
+			os.RemoveAll(tempDir) // Clean up immediately
 			continue
 		}
 
 		parsedURL, err := url.Parse(repo.RepoURL)
 		if err != nil {
 			fmt.Printf("Failed to parse URL %s: %v\n", repo.RepoURL, err)
+			os.RemoveAll(tempDir) // Clean up immediately
 			continue
 		}
 
 		pathSegments := strings.Split(parsedURL.Path, "/")
 		if len(pathSegments) < 3 {
 			fmt.Printf("Invalid repository URL format: %s\n", repo.RepoURL)
+			os.RemoveAll(tempDir) // Clean up immediately
 			continue
 		}
 
@@ -429,10 +439,14 @@ func downloadSBOMs(c *cli.Context) error {
 		err = sbom.GenerateSBOMWithCycloneDX(tempDir, outputFile, repoURLWithoutScheme)
 		if err != nil {
 			fmt.Printf("Failed to generate SBOM for %s: %v\n", repo.RepoURL, err)
+			os.RemoveAll(tempDir) // Clean up immediately
 			continue
 		}
 
 		fmt.Printf("SBOM for %s generated and saved successfully\n", repo.RepoURL)
+
+		// Clean up the temporary directory immediately after processing
+		os.RemoveAll(tempDir)
 
 		// Add a delay of 3 seconds between downloads
 		time.Sleep(3 * time.Second)
