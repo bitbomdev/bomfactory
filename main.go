@@ -10,7 +10,6 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-	"time"
 
 	"github.com/bit-bom/bom-factory/pkg/csv"
 	"github.com/bit-bom/bom-factory/pkg/sbom"
@@ -447,9 +446,6 @@ func downloadSBOMs(c *cli.Context) error {
 
 		// Clean up the temporary directory immediately after processing
 		os.RemoveAll(tempDir)
-
-		// Add a delay of 3 seconds between downloads
-		time.Sleep(3 * time.Second)
 	}
 
 	return nil
