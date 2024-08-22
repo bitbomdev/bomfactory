@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"os/exec"
-	"strings"
 	"time"
 
 	proto "github.com/protobom/protobom/pkg/reader"
@@ -27,14 +26,11 @@ func GenerateSBOMWithCycloneDX(directory, outputFile, repo string) error {
 	if err != nil {
 		return fmt.Errorf("syft is not installed or not in PATH: %w", err)
 	}
-	// Generate the output file name by replacing slashes with underscores and appending .json extension
-	escapedRepo := strings.ReplaceAll(repo, "/", "_")
-	outputFileName := fmt.Sprintf("%s.json", escapedRepo)
 	// Create a context with a 2-minute timeout
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Minute)
 	defer cancel()
 
-	cmd := exec.CommandContext(ctx, "syft", "scan", directory, "-o", "cyclonedx-json@1.5", "--file", outputFileName)
+	cmd := exec.CommandContext(ctx, "syft", "scan", directory, "-o", "cyclonedx-json@1.5", "--file", outputFile)
 	fmt.Println("Executing command: for the repo", repo, cmd.String())
 	output, err := cmd.CombinedOutput()
 	if ctx.Err() == context.DeadlineExceeded {
