@@ -30,7 +30,7 @@ func GenerateSBOMWithCycloneDX(directory, outputFile, repo string) error {
 	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Minute)
 	defer cancel()
 
-	cmd := exec.CommandContext(ctx, "syft", "scan", directory, "-o", "cyclonedx-json@1.5", "--file", outputFile)
+	cmd := exec.CommandContext(ctx, "syft", "scan", directory, "-o", "cyclonedx-json@1.5", "--source-name", repo, "--file", outputFile)
 	fmt.Println("Executing command: for the repo", repo, cmd.String())
 	output, err := cmd.CombinedOutput()
 	if ctx.Err() == context.DeadlineExceeded {
