@@ -8,3 +8,4 @@ melange.rsa.pub
 sbom.json
 sbom-*.json
 output-bomfactory-*.tar
+.idea
