@@ -49,7 +49,7 @@ build-image() {
   echo "Loaded image for architecture: ${ARCH}"
 
   # Tag the image
-  docker tag "${ORG}/${IMAGE_NAME}:${IMAGE_TAG}" "ghcr.io/${ORG}/${IMAGE_NAME}:latest"
+  docker tag "${ORG}/${IMAGE_NAME}:${IMAGE_TAG}"-amd64 "ghcr.io/${ORG}/${IMAGE_NAME}:latest"
 }
 
 build-image
