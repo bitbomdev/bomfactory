@@ -17,3 +17,6 @@ clean:
 	rm -rf bin/
 
 .PHONY: all build lint clean
+
+docker-build:
+	./build-image.sh
