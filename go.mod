@@ -42,9 +42,9 @@ require (
 	github.com/xanzy/ssh-agent v0.3.3 // indirect
 	github.com/xeipuuv/gojsonpointer v0.0.0-20190905194746-02993c407bfb // indirect
 	github.com/xrash/smetrics v0.0.0-20240521201337-686a1a2994c1 // indirect
-	golang.org/x/crypto v0.25.0 // indirect
+	golang.org/x/crypto v0.31.0 // indirect
 	golang.org/x/net v0.27.0 // indirect
-	golang.org/x/sys v0.22.0 // indirect
+	golang.org/x/sys v0.28.0 // indirect
 	google.golang.org/protobuf v1.34.1 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	sigs.k8s.io/release-utils v0.8.2 // indirect
